@@ -1,0 +1,2759 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jmeterTestPlan version="1.2" properties="5.0" jmeter="5.6.2">
+  <hashTree>
+    <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="RMS-PUBLIC-API" enabled="true">
+      <boolProp name="TestPlan.functional_mode">false</boolProp>
+      <boolProp name="TestPlan.tearDown_on_shutdown">false</boolProp>
+      <boolProp name="TestPlan.serialize_threadgroups">true</boolProp>
+      <elementProp name="TestPlan.user_defined_variables" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+        <collectionProp name="Arguments.arguments"/>
+      </elementProp>
+    </TestPlan>
+    <hashTree>
+      <ConfigTestElement guiclass="PropertyControlGui" testclass="ConfigTestElement" testname="Property Display" enabled="false"/>
+      <hashTree/>
+      <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="Default environement configuration" enabled="true">
+        <collectionProp name="Arguments.arguments">
+          <elementProp name="subscriptionId_default" elementType="Argument">
+            <stringProp name="Argument.name">subscriptionId_default</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+            <stringProp name="Argument.value">f0d5c515-ed20-49fd-a9c5-d3b336f7df5a</stringProp>
+          </elementProp>
+          <elementProp name="accountName_default" elementType="Argument">
+            <stringProp name="Argument.name">accountName_default</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+            <stringProp name="Argument.value">default</stringProp>
+          </elementProp>
+          <elementProp name="storageAccountName_default" elementType="Argument">
+            <stringProp name="Argument.name">storageAccountName_default</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+            <stringProp name="Argument.value">strmsjbawltw6e55jc</stringProp>
+          </elementProp>
+          <elementProp name="resourceGroup_default" elementType="Argument">
+            <stringProp name="Argument.name">resourceGroup_default</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+            <stringProp name="Argument.value">rg-rms-perftest-westeurope</stringProp>
+          </elementProp>
+          <elementProp name="api-version_default" elementType="Argument">
+            <stringProp name="Argument.name">api-version_default</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+            <stringProp name="Argument.value">2018-07-01</stringProp>
+          </elementProp>
+          <elementProp name="assetName_default" elementType="Argument">
+            <stringProp name="Argument.name">assetName_default</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+            <stringProp name="Argument.value">testAsset1</stringProp>
+          </elementProp>
+          <elementProp name="transformName_default" elementType="Argument">
+            <stringProp name="Argument.name">transformName_default</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+            <stringProp name="Argument.value">testTransform1</stringProp>
+          </elementProp>
+          <elementProp name="jobName_default" elementType="Argument">
+            <stringProp name="Argument.name">jobName_default</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+            <stringProp name="Argument.value">testJob1</stringProp>
+          </elementProp>
+          <elementProp name="liveEventName_default" elementType="Argument">
+            <stringProp name="Argument.name">liveEventName_default</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+            <stringProp name="Argument.value">testLiveEvent1</stringProp>
+          </elementProp>
+          <elementProp name="liveOutputName_default" elementType="Argument">
+            <stringProp name="Argument.name">liveOutputName_default</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+            <stringProp name="Argument.value">testLiveOutput1</stringProp>
+          </elementProp>
+          <elementProp name="streamingEndpointName_default" elementType="Argument">
+            <stringProp name="Argument.name">streamingEndpointName_default</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+            <stringProp name="Argument.value">default</stringProp>
+          </elementProp>
+          <elementProp name="streamingPolicyName_default" elementType="Argument">
+            <stringProp name="Argument.name">streamingPolicyName_default</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+            <stringProp name="Argument.value">testStreamingPolicy1</stringProp>
+          </elementProp>
+          <elementProp name="streamingLocatorName_default" elementType="Argument">
+            <stringProp name="Argument.name">streamingLocatorName_default</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+            <stringProp name="Argument.value">testStreamingLocator1</stringProp>
+          </elementProp>
+          <elementProp name="location_default" elementType="Argument">
+            <stringProp name="Argument.name">location_default</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+            <stringProp name="Argument.value">westus2</stringProp>
+          </elementProp>
+          <elementProp name="apiEndpoint_default" elementType="Argument">
+            <stringProp name="Argument.name">apiEndpoint_default</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+            <stringProp name="Argument.value">rms.lghoydp2mevhg.ravnur.net</stringProp>
+          </elementProp>
+          <elementProp name="rmsApiKey_default" elementType="Argument">
+            <stringProp name="Argument.name">rmsApiKey_default</stringProp>
+            <stringProp name="Argument.value">tubZGP3mS8pTQM9VXGEVEznp</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+        </collectionProp>
+      </Arguments>
+      <hashTree/>
+      <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="Azure LT environement configurations" enabled="true">
+        <collectionProp name="Arguments.arguments">
+          <elementProp name="subscriptionId" elementType="Argument">
+            <stringProp name="Argument.name">subscriptionId</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+            <stringProp name="Argument.value">${__BeanShell( System.getenv(&quot;subscriptionId&quot;) )}</stringProp>
+          </elementProp>
+          <elementProp name="accountName" elementType="Argument">
+            <stringProp name="Argument.name">accountName</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+            <stringProp name="Argument.value">${__BeanShell( System.getenv(&quot;accountName&quot;) )}</stringProp>
+          </elementProp>
+          <elementProp name="storageAccountName" elementType="Argument">
+            <stringProp name="Argument.name">storageAccountName</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+            <stringProp name="Argument.value">${__BeanShell( System.getenv(&quot;storageAccountName&quot;) )}</stringProp>
+          </elementProp>
+          <elementProp name="resourceGroup" elementType="Argument">
+            <stringProp name="Argument.name">resourceGroup</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+            <stringProp name="Argument.value">${__BeanShell( System.getenv(&quot;resourceGroup&quot;) )}</stringProp>
+          </elementProp>
+          <elementProp name="api-version" elementType="Argument">
+            <stringProp name="Argument.name">api-version</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+            <stringProp name="Argument.value">${__BeanShell( System.getenv(&quot;api-version&quot;) )}</stringProp>
+          </elementProp>
+          <elementProp name="assetName" elementType="Argument">
+            <stringProp name="Argument.name">assetName</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+            <stringProp name="Argument.value">${__BeanShell( System.getenv(&quot;assetName&quot;) )}</stringProp>
+          </elementProp>
+          <elementProp name="transformName" elementType="Argument">
+            <stringProp name="Argument.name">transformName</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+            <stringProp name="Argument.value">${__BeanShell( System.getenv(&quot;transformName&quot;) )}</stringProp>
+          </elementProp>
+          <elementProp name="jobName" elementType="Argument">
+            <stringProp name="Argument.name">jobName</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+            <stringProp name="Argument.value">${__BeanShell( System.getenv(&quot;jobName&quot;) )}</stringProp>
+          </elementProp>
+          <elementProp name="liveEventName" elementType="Argument">
+            <stringProp name="Argument.name">liveEventName</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+            <stringProp name="Argument.value">${__BeanShell( System.getenv(&quot;liveEventName&quot;) )}</stringProp>
+          </elementProp>
+          <elementProp name="liveOutputName" elementType="Argument">
+            <stringProp name="Argument.name">liveOutputName</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+            <stringProp name="Argument.value">${__BeanShell( System.getenv(&quot;liveOutputName&quot;) )}</stringProp>
+          </elementProp>
+          <elementProp name="streamingEndpointName" elementType="Argument">
+            <stringProp name="Argument.name">streamingEndpointName</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+            <stringProp name="Argument.value">${__BeanShell( System.getenv(&quot;streamingEndpointName&quot;) )}</stringProp>
+          </elementProp>
+          <elementProp name="streamingPolicyName" elementType="Argument">
+            <stringProp name="Argument.name">streamingPolicyName</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+            <stringProp name="Argument.value">${__BeanShell( System.getenv(&quot;streamingPolicyName&quot;) )}</stringProp>
+          </elementProp>
+          <elementProp name="streamingLocatorName" elementType="Argument">
+            <stringProp name="Argument.name">streamingLocatorName</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+            <stringProp name="Argument.value">${__BeanShell( System.getenv(&quot;streamingLocatorName&quot;) )}</stringProp>
+          </elementProp>
+          <elementProp name="location" elementType="Argument">
+            <stringProp name="Argument.name">location</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+            <stringProp name="Argument.value">${__BeanShell( System.getenv(&quot;location&quot;) )}</stringProp>
+          </elementProp>
+          <elementProp name="AccessToken" elementType="Argument">
+            <stringProp name="Argument.name">AccessToken</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+            <stringProp name="Argument.value">${__BeanShell( System.getenv(&quot;AccessToken&quot;) )}</stringProp>
+          </elementProp>
+          <elementProp name="apiEndpoint" elementType="Argument">
+            <stringProp name="Argument.name">apiEndpoint</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+            <stringProp name="Argument.value">${__BeanShell( System.getenv(&quot;apiEndpoint&quot;) )}</stringProp>
+          </elementProp>
+          <elementProp name="rmsApiKey" elementType="Argument">
+            <stringProp name="Argument.name">rmsApiKey</stringProp>
+            <stringProp name="Argument.value">${__BeanShell( System.getenv(&quot;rmsApiKey&quot;) )}</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+        </collectionProp>
+      </Arguments>
+      <hashTree/>
+      <JSR223PreProcessor guiclass="TestBeanGUI" testclass="JSR223PreProcessor" testname="Check Azure LT environement for configurations" enabled="true">
+        <stringProp name="scriptLanguage">groovy</stringProp>
+        <stringProp name="parameters"></stringProp>
+        <stringProp name="filename"></stringProp>
+        <stringProp name="cacheKey">true</stringProp>
+        <stringProp name="script">// Checking if JMeter configuration running in Azure Load Testing evnvironement
+
+List&lt;String&gt; list_of_parameters = [&quot;subscriptionId&quot;, &quot;accountName&quot;, &quot;storageAccountName&quot;, &quot;resourceGroup&quot;, &quot;api-version&quot;, &quot;assetName&quot;, &quot;transformName&quot;, &quot;jobName&quot;, &quot;liveEventName&quot;, &quot;liveOutputName&quot;, &quot;streamingEndpointName&quot;, &quot;streamingPolicyName&quot;, &quot;streamingLocatorName&quot;, &quot;location&quot;, &quot;AccessToken&quot;, &quot;apiEndpoint&quot;, &quot;rmsApiKey&quot;]
+
+for(next_parameter in list_of_parameters){
+	default_parameter_name = next_parameter + &quot;_default&quot;
+	def var_to_check = vars.get(next_parameter)
+	if(var_to_check == null || var_to_check == 0 || var_to_check.length() == 0){
+		vars.put(next_parameter, vars.get(default_parameter_name))
+	}
+}</stringProp>
+      </JSR223PreProcessor>
+      <hashTree/>
+      <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="Default Threads Running Properties" enabled="true">
+        <collectionProp name="Arguments.arguments">
+          <elementProp name="gAuthToken_number_of_threads_default" elementType="Argument">
+            <stringProp name="Argument.name">gAuthToken_number_of_threads_default</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+            <stringProp name="Argument.value">1</stringProp>
+          </elementProp>
+          <elementProp name="gAuthToken_rump_up_period_default" elementType="Argument">
+            <stringProp name="Argument.name">gAuthToken_rump_up_period_default</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+            <stringProp name="Argument.value">1</stringProp>
+          </elementProp>
+          <elementProp name="gAuthToken_loop_count_default" elementType="Argument">
+            <stringProp name="Argument.name">gAuthToken_loop_count_default</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+            <stringProp name="Argument.value">1</stringProp>
+          </elementProp>
+          <elementProp name="asts_number_of_threads_default" elementType="Argument">
+            <stringProp name="Argument.name">asts_number_of_threads_default</stringProp>
+            <stringProp name="Argument.value">1</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="asts_rump_up_period_default" elementType="Argument">
+            <stringProp name="Argument.name">asts_rump_up_period_default</stringProp>
+            <stringProp name="Argument.value">1</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="asts_loop_count_default" elementType="Argument">
+            <stringProp name="Argument.name">asts_loop_count_default</stringProp>
+            <stringProp name="Argument.value">1</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="asts_max_number_of_assets_retrive_default" elementType="Argument">
+            <stringProp name="Argument.name">asts_max_number_of_assets_retrive_default</stringProp>
+            <stringProp name="Argument.value">10</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="asts_assetname_random_string_length_default" elementType="Argument">
+            <stringProp name="Argument.name">asts_assetname_random_string_length_default</stringProp>
+            <stringProp name="Argument.value">10</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="asts_ListAssets_loop_count_default" elementType="Argument">
+            <stringProp name="Argument.name">asts_ListAssets_loop_count_default</stringProp>
+            <stringProp name="Argument.value">1</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="asts_GetAnAsset_loop_count_default" elementType="Argument">
+            <stringProp name="Argument.name">asts_GetAnAsset_loop_count_default</stringProp>
+            <stringProp name="Argument.value">1</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="asts_CreateOrUpdateAsset_loop_count_default" elementType="Argument">
+            <stringProp name="Argument.name">asts_CreateOrUpdateAsset_loop_count_default</stringProp>
+            <stringProp name="Argument.value">1</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="asts_ListAnAssetURLs_loop_count_default" elementType="Argument">
+            <stringProp name="Argument.name">asts_ListAnAssetURLs_loop_count_default</stringProp>
+            <stringProp name="Argument.value">1</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="asts_ListStreamingLocators_loop_count_default" elementType="Argument">
+            <stringProp name="Argument.name">asts_ListStreamingLocators_loop_count_default</stringProp>
+            <stringProp name="Argument.value">1</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="spl_number_of_threads_default" elementType="Argument">
+            <stringProp name="Argument.name">spl_number_of_threads_default</stringProp>
+            <stringProp name="Argument.value">1</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="spl_rump_up_period_default" elementType="Argument">
+            <stringProp name="Argument.name">spl_rump_up_period_default</stringProp>
+            <stringProp name="Argument.value">1</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="spl_loop_count_default" elementType="Argument">
+            <stringProp name="Argument.name">spl_loop_count_default</stringProp>
+            <stringProp name="Argument.value">1</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="spl_ListStreamingPolicies_loop_count_default" elementType="Argument">
+            <stringProp name="Argument.name">spl_ListStreamingPolicies_loop_count_default</stringProp>
+            <stringProp name="Argument.value">1</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="spl_GetStreamingLocator_loop_count_default" elementType="Argument">
+            <stringProp name="Argument.name">spl_GetStreamingLocator_loop_count_default</stringProp>
+            <stringProp name="Argument.value">1</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="spl_ListStreamingLocators_loop_count_default" elementType="Argument">
+            <stringProp name="Argument.name">spl_ListStreamingLocators_loop_count_default</stringProp>
+            <stringProp name="Argument.value">1</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="spl_CreateStreamingLocator_loop_count_default" elementType="Argument">
+            <stringProp name="Argument.name">spl_CreateStreamingLocator_loop_count_default</stringProp>
+            <stringProp name="Argument.value">1</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="spl_locatorname_random_string_length_default" elementType="Argument">
+            <stringProp name="Argument.name">spl_locatorname_random_string_length_default</stringProp>
+            <stringProp name="Argument.value">10</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="spl_ListPaths_loop_count_default" elementType="Argument">
+            <stringProp name="Argument.name">spl_ListPaths_loop_count_default</stringProp>
+            <stringProp name="Argument.value">1</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="tj_number_of_threads_default" elementType="Argument">
+            <stringProp name="Argument.name">tj_number_of_threads_default</stringProp>
+            <stringProp name="Argument.value">1</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="tj_rump_up_period_default" elementType="Argument">
+            <stringProp name="Argument.name">tj_rump_up_period_default</stringProp>
+            <stringProp name="Argument.value">1</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="tj_loop_count_default" elementType="Argument">
+            <stringProp name="Argument.name">tj_loop_count_default</stringProp>
+            <stringProp name="Argument.value">1</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="tj_CreateUpdateTransform_loop_count_default" elementType="Argument">
+            <stringProp name="Argument.name">tj_CreateUpdateTransform_loop_count_default</stringProp>
+            <stringProp name="Argument.value">1</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="tj_locatorname_random_string_length_default" elementType="Argument">
+            <stringProp name="Argument.name">tj_locatorname_random_string_length_default</stringProp>
+            <stringProp name="Argument.value">10</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="tj_run_update_job_procedure_default" elementType="Argument">
+            <stringProp name="Argument.name">tj_run_update_job_procedure_default</stringProp>
+            <stringProp name="Argument.value">false</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+        </collectionProp>
+      </Arguments>
+      <hashTree/>
+      <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="Azure LT environement Threads Testing Properties" enabled="true">
+        <collectionProp name="Arguments.arguments">
+          <elementProp name="asts_number_of_threads" elementType="Argument">
+            <stringProp name="Argument.name">asts_number_of_threads</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+            <stringProp name="Argument.value">${__BeanShell( System.getenv(&quot;astsNumberOfThreads&quot;))}</stringProp>
+            <stringProp name="Argument.desc">Assets testing thread: Number of Users. Default value is 1.</stringProp>
+          </elementProp>
+          <elementProp name="asts_rump_up_period" elementType="Argument">
+            <stringProp name="Argument.name">asts_rump_up_period</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+            <stringProp name="Argument.value">${__BeanShell( System.getenv(&quot;astsRumpUpPeriod&quot;))}</stringProp>
+            <stringProp name="Argument.desc">Assets testing thread: Rump Up Period. Default value is 1.</stringProp>
+          </elementProp>
+          <elementProp name="asts_loop_count" elementType="Argument">
+            <stringProp name="Argument.name">asts_loop_count</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+            <stringProp name="Argument.value">${__BeanShell( System.getenv(&quot;astsLoopCount&quot;))}</stringProp>
+            <stringProp name="Argument.desc">Assets testing thread: Loop Count. Default value is 1.</stringProp>
+          </elementProp>
+          <elementProp name="asts_ListAssets_loop_count" elementType="Argument">
+            <stringProp name="Argument.name">asts_ListAssets_loop_count</stringProp>
+            <stringProp name="Argument.value">${__BeanShell( System.getenv(&quot;astsListAssetsLC&quot;))}</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+            <stringProp name="Argument.desc">Assets testing thread: Loop Count for List Asset request for each thread user. Default value is 1.</stringProp>
+          </elementProp>
+          <elementProp name="asts_max_number_of_assets_retrive" elementType="Argument">
+            <stringProp name="Argument.name">asts_max_number_of_assets_retrive</stringProp>
+            <stringProp name="Argument.value">${__BeanShell( System.getenv(&quot;astsMaxNumberOfAssetsRetrive&quot;))}</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+            <stringProp name="Argument.desc">Assets testing thread: Max number of assets that will be selected to Get Asset stage. Default value is 10.</stringProp>
+          </elementProp>
+          <elementProp name="asts_assetname_random_string_length" elementType="Argument">
+            <stringProp name="Argument.name">asts_assetname_random_string_length</stringProp>
+            <stringProp name="Argument.value">${__BeanShell( System.getenv(&quot;astsRandomStringLength&quot;))}</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+            <stringProp name="Argument.desc">Assets testing thread: The length of random string that should be generated for using as new Asset name. Default value is 10.</stringProp>
+          </elementProp>
+          <elementProp name="asts_GetAnAsset_loop_count" elementType="Argument">
+            <stringProp name="Argument.name">asts_GetAnAsset_loop_count</stringProp>
+            <stringProp name="Argument.value">${__BeanShell( System.getenv(&quot;astsGetAnAssetLC&quot;))}</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+            <stringProp name="Argument.desc">Assets testing thread: Loop Count for Get An Asset request for each thread user. Default value is 1.</stringProp>
+          </elementProp>
+          <elementProp name="asts_CreateOrUpdateAsset_loop_count" elementType="Argument">
+            <stringProp name="Argument.name">asts_CreateOrUpdateAsset_loop_count</stringProp>
+            <stringProp name="Argument.value">${__BeanShell( System.getenv(&quot;astsCreateOrUpdateAssetLC&quot;))}</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+            <stringProp name="Argument.desc">Assets testing thread: Loop Count for Create or Update Asset request for each thread user. Default value is 1.</stringProp>
+          </elementProp>
+          <elementProp name="asts_ListAnAssetURLs_loop_count" elementType="Argument">
+            <stringProp name="Argument.name">asts_ListAnAssetURLs_loop_count</stringProp>
+            <stringProp name="Argument.value">${__BeanShell( System.getenv(&quot;astsListAnAssetURLsLC&quot;))}</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+            <stringProp name="Argument.desc">Assets testing thread: Loop Count for List an Asset URLs request for each thread user. Default value is 1.</stringProp>
+          </elementProp>
+          <elementProp name="asts_ListStreamingLocators_loop_count" elementType="Argument">
+            <stringProp name="Argument.name">asts_ListStreamingLocators_loop_count</stringProp>
+            <stringProp name="Argument.value">${__BeanShell( System.getenv(&quot;astsListStreamingLocatorsLC&quot;))}</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+            <stringProp name="Argument.desc">Assets testing thread: Loop Count for List Streaming Locators request for each thread user. Default value is 1.</stringProp>
+          </elementProp>
+          <elementProp name="spl_number_of_threads" elementType="Argument">
+            <stringProp name="Argument.name">spl_number_of_threads</stringProp>
+            <stringProp name="Argument.value">${__BeanShell( System.getenv(&quot;splNumberOfThreads&quot;))}</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+            <stringProp name="Argument.desc">Streaming Policies and Locators testing thread: Number of Users. Default value is 1.</stringProp>
+          </elementProp>
+          <elementProp name="spl_rump_up_period" elementType="Argument">
+            <stringProp name="Argument.name">spl_rump_up_period</stringProp>
+            <stringProp name="Argument.value">${__BeanShell( System.getenv(&quot;splRumpUpPeriod&quot;))}</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+            <stringProp name="Argument.desc">Streaming Policies and Locators testing thread: Rump Up Period. Default value is 1.</stringProp>
+          </elementProp>
+          <elementProp name="spl_loop_count" elementType="Argument">
+            <stringProp name="Argument.name">spl_loop_count</stringProp>
+            <stringProp name="Argument.value">${__BeanShell( System.getenv(&quot;splLoopCount&quot;))}</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+            <stringProp name="Argument.desc">Streaming Policies and Locators testing thread: Loop Count. Default value is 1.</stringProp>
+          </elementProp>
+          <elementProp name="spl_ListStreamingPolicies_loop_count" elementType="Argument">
+            <stringProp name="Argument.name">spl_ListStreamingPolicies_loop_count</stringProp>
+            <stringProp name="Argument.value">${__BeanShell( System.getenv(&quot;splListStreamingPoliciesLC&quot;))}</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+            <stringProp name="Argument.desc">Streaming Policies and Locators testing thread: Loop Count for List Streaming Policies request for each thread user. Default value is 1.</stringProp>
+          </elementProp>
+          <elementProp name="spl_GetStreamingLocator_loop_count" elementType="Argument">
+            <stringProp name="Argument.name">spl_GetStreamingLocator_loop_count</stringProp>
+            <stringProp name="Argument.value">${__BeanShell(System.getenv(&quot;splGetStreamingLocatorLC&quot;))}</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+            <stringProp name="Argument.desc">Streaming Policies and Locators testing thread: Loop Count for Get Streaming Locators request for each thread user. Default value is 1.</stringProp>
+          </elementProp>
+          <elementProp name="spl_ListStreamingLocators_loop_count" elementType="Argument">
+            <stringProp name="Argument.name">spl_ListStreamingLocators_loop_count</stringProp>
+            <stringProp name="Argument.value">${__BeanShell(System.getenv(&quot;splListStreamingLocatorsLC&quot;))}</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+            <stringProp name="Argument.desc">Streaming Policies and Locators testing thread: Loop Count for List Streaming Locators request for each thread user. Default value is 1.</stringProp>
+          </elementProp>
+          <elementProp name="spl_CreateStreamingLocator_loop_count" elementType="Argument">
+            <stringProp name="Argument.name">spl_CreateStreamingLocator_loop_count</stringProp>
+            <stringProp name="Argument.value">${__BeanShell(System.getenv(&quot;splCreateStreamingLocatorLC&quot;))}</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+            <stringProp name="Argument.desc">Streaming Policies and Locators testing thread: Loop Count for Create Streaming Locators request for each thread user. Default value is 1.</stringProp>
+          </elementProp>
+          <elementProp name="spl_locatorname_random_string_length" elementType="Argument">
+            <stringProp name="Argument.name">spl_locatorname_random_string_length</stringProp>
+            <stringProp name="Argument.value">${__BeanShell( System.getenv(&quot;splRandomStringLength&quot;))}</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+            <stringProp name="Argument.desc">Streaming Policies and Locators testing thread: The length of random string that should be generated for using as new Locator name. Default value is 10.</stringProp>
+          </elementProp>
+          <elementProp name="spl_ListPaths_loop_count" elementType="Argument">
+            <stringProp name="Argument.name">spl_ListPaths_loop_count</stringProp>
+            <stringProp name="Argument.value">${__BeanShell( System.getenv(&quot;splListPathLC&quot;))}</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+            <stringProp name="Argument.desc">Streaming Policies and Locators testing thread: Loop Count for List Path request for each thread user. Default value is 1.</stringProp>
+          </elementProp>
+          <elementProp name="tj_number_of_threads" elementType="Argument">
+            <stringProp name="Argument.name">tj_number_of_threads</stringProp>
+            <stringProp name="Argument.value">${__BeanShell(System.getenv(&quot;tjNumberOfThreads&quot;))}</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+            <stringProp name="Argument.desc">Transforms and Jobs testing thread: Number of Users. Default value is 1.</stringProp>
+          </elementProp>
+          <elementProp name="tj_rump_up_period" elementType="Argument">
+            <stringProp name="Argument.name">tj_rump_up_period</stringProp>
+            <stringProp name="Argument.value">${__BeanShell(System.getenv(&quot;tjRumpUpPeriod&quot;))}</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+            <stringProp name="Argument.desc">Transforms and Jobs testing thread: Rump Up Period. Default value is 1.</stringProp>
+          </elementProp>
+          <elementProp name="tj_loop_count" elementType="Argument">
+            <stringProp name="Argument.name">tj_loop_count</stringProp>
+            <stringProp name="Argument.value">${__BeanShell(System.getenv(&quot;tjLoopCount&quot;))}</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+            <stringProp name="Argument.desc">Transforms and Jobs testing thread: Loop Count. Default value is 1.</stringProp>
+          </elementProp>
+          <elementProp name="tj_CreateUpdateTransform_loop_count" elementType="Argument">
+            <stringProp name="Argument.name">tj_CreateUpdateTransform_loop_count</stringProp>
+            <stringProp name="Argument.value">${__BeanShell(System.getenv(&quot;tjCreateUpdateTransformLC&quot;))}</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+            <stringProp name="Argument.desc">Transforms and Jobs testing thread: Loop Count for Create Update Transform request for each thread user. Default value is 1.</stringProp>
+          </elementProp>
+          <elementProp name="tj_locatorname_random_string_length" elementType="Argument">
+            <stringProp name="Argument.name">tj_locatorname_random_string_length</stringProp>
+            <stringProp name="Argument.value">${__BeanShell(System.getenv(&quot;tjLocatornameRandomStringLength&quot;))}</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+            <stringProp name="Argument.desc">Transforms and Jobs testing thread: The length of random string that should be generated for using as new Locator name. Default value is 10.</stringProp>
+          </elementProp>
+          <elementProp name="tj_run_update_job_procedure" elementType="Argument">
+            <stringProp name="Argument.name">tj_run_update_job_procedure</stringProp>
+            <stringProp name="Argument.value">${__BeanShell(System.getenv(&quot;tjRunUpdateJobRequest&quot;))}</stringProp>
+            <stringProp name="Argument.desc">Transforms and Jobs testing thread: Temporary variable to skip Update Job request. Default value is &quot;false&quot;.</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+        </collectionProp>
+      </Arguments>
+      <hashTree/>
+      <JSR223PreProcessor guiclass="TestBeanGUI" testclass="JSR223PreProcessor" testname="Check Azure LT envirenement for Thread Properties" enabled="true">
+        <stringProp name="scriptLanguage">groovy</stringProp>
+        <stringProp name="parameters"></stringProp>
+        <stringProp name="filename"></stringProp>
+        <stringProp name="cacheKey">true</stringProp>
+        <stringProp name="script">// Checking if JMeter configuration running in Azure Load Testing evnvironement
+
+List&lt;String&gt; list_of_parameters = [&quot;asts_number_of_threads&quot;, &quot;asts_rump_up_period&quot;, &quot;asts_loop_count&quot;, &quot;asts_max_number_of_assets_retrive&quot;, &quot;asts_assetname_random_string_length&quot;, &quot;asts_ListAssets_loop_count&quot;, &quot;asts_GetAnAsset_loop_count&quot;, &quot;asts_CreateOrUpdateAsset_loop_count&quot;, &quot;asts_ListAnAssetURLs_loop_count&quot;, &quot;asts_ListStreamingLocators_loop_count&quot;, &quot;spl_number_of_threads&quot;, &quot;spl_rump_up_period&quot;, &quot;spl_loop_count&quot;, &quot;spl_ListStreamingPolicies_loop_count&quot;, &quot;spl_ListStreamingLocators_loop_count&quot;, &quot;spl_GetStreamingLocator_loop_count&quot;, &quot;spl_CreateStreamingLocator_loop_count&quot;, &quot;spl_locatorname_random_string_length&quot;, &quot;spl_ListPaths_loop_count&quot;, &quot;tj_number_of_threads&quot;, &quot;tj_rump_up_period&quot;, &quot;tj_loop_count&quot;, &quot;tj_CreateUpdateTransform_loop_count&quot;, &quot;tj_locatorname_random_string_length&quot;, &quot;tj_run_update_job_procedure&quot;]
+
+
+for(next_parameter in list_of_parameters){
+	default_parameter_name = next_parameter + &quot;_default&quot;
+	def var_to_check = vars.get(next_parameter)
+	if(var_to_check == null || var_to_check == 0 || var_to_check.length() == 0){
+		vars.put(next_parameter, vars.get(default_parameter_name))
+	}
+}
+</stringProp>
+      </JSR223PreProcessor>
+      <hashTree/>
+      <SetupThreadGroup guiclass="SetupThreadGroupGui" testclass="SetupThreadGroup" testname="Get AAD Authorization Token — gAuthToken" enabled="true">
+        <stringProp name="ThreadGroup.on_sample_error">stoptest</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
+          <stringProp name="LoopController.loops">${gAuthToken_loop_count_default}</stringProp>
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+        </elementProp>
+        <stringProp name="ThreadGroup.num_threads">${gAuthToken_number_of_threads_default}</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">${gAuthToken_rump_up_period_default}</stringProp>
+        <boolProp name="ThreadGroup.scheduler">false</boolProp>
+        <stringProp name="ThreadGroup.duration"></stringProp>
+        <stringProp name="ThreadGroup.delay"></stringProp>
+        <boolProp name="ThreadGroup.same_user_on_next_iteration">false</boolProp>
+        <stringProp name="TestPlan.comments">Get AAD Authorization Token</stringProp>
+      </SetupThreadGroup>
+      <hashTree>
+        <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="Base headers" enabled="true">
+          <collectionProp name="HeaderManager.headers">
+            <elementProp name="" elementType="Header">
+              <stringProp name="Header.name">Content-Type</stringProp>
+              <stringProp name="Header.value">application/json</stringProp>
+            </elementProp>
+            <elementProp name="" elementType="Header">
+              <stringProp name="Header.name">Connection</stringProp>
+              <stringProp name="Header.value">keep-alive</stringProp>
+            </elementProp>
+            <elementProp name="" elementType="Header">
+              <stringProp name="Header.name">Accept-Encoding</stringProp>
+              <stringProp name="Header.value">gzip, deflate, br</stringProp>
+            </elementProp>
+            <elementProp name="" elementType="Header">
+              <stringProp name="Header.name">Keep-Alive</stringProp>
+              <stringProp name="Header.value">true</stringProp>
+            </elementProp>
+            <elementProp name="" elementType="Header">
+              <stringProp name="Header.name">Accept</stringProp>
+              <stringProp name="Header.value">*/*</stringProp>
+            </elementProp>
+          </collectionProp>
+        </HeaderManager>
+        <hashTree/>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Get Access Token" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{&#xd;
+    &quot;subscriptionId&quot;: &quot;${subscriptionId}&quot;,&#xd;
+    &quot;apiKey&quot;: &quot;${rmsApiKey}&quot;&#xd;
+}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">${apiEndpoint}</stringProp>
+          <stringProp name="HTTPSampler.port">443</stringProp>
+          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.path">/auth/token</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <boolProp name="HTTPSampler.BROWSER_COMPATIBLE_MULTIPART">false</boolProp>
+          <boolProp name="HTTPSampler.image_parser">false</boolProp>
+          <boolProp name="HTTPSampler.concurrentDwn">false</boolProp>
+          <stringProp name="HTTPSampler.concurrentPool">6</stringProp>
+          <boolProp name="HTTPSampler.md5">false</boolProp>
+          <intProp name="HTTPSampler.ipSourceType">0</intProp>
+          <stringProp name="HTTPSampler.implementation">HttpClient4</stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <BeanShellPostProcessor guiclass="TestBeanGUI" testclass="BeanShellPostProcessor" testname="Save AccessToken" enabled="true">
+            <boolProp name="resetInterpreter">false</boolProp>
+            <stringProp name="parameters"></stringProp>
+            <stringProp name="filename"></stringProp>
+            <stringProp name="script">vars.put(&quot;AccessToken&quot;, new String(data));
+props.put(&quot;AccessToken&quot;, new String(data));</stringProp>
+          </BeanShellPostProcessor>
+          <hashTree/>
+        </hashTree>
+        <DebugSampler guiclass="TestBeanGUI" testclass="DebugSampler" testname="Debug Get Access Token" enabled="true">
+          <boolProp name="displayJMeterProperties">false</boolProp>
+          <boolProp name="displayJMeterVariables">true</boolProp>
+          <boolProp name="displaySystemProperties">false</boolProp>
+        </DebugSampler>
+        <hashTree/>
+        <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="Results of Getting Access Token" enabled="true">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>true</message>
+              <threadName>true</threadName>
+              <dataType>true</dataType>
+              <encoding>false</encoding>
+              <assertions>true</assertions>
+              <subresults>true</subresults>
+              <responseData>false</responseData>
+              <samplerData>false</samplerData>
+              <xml>false</xml>
+              <fieldNames>true</fieldNames>
+              <responseHeaders>false</responseHeaders>
+              <requestHeaders>false</requestHeaders>
+              <responseDataOnError>false</responseDataOnError>
+              <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <bytes>true</bytes>
+              <sentBytes>true</sentBytes>
+              <url>true</url>
+              <threadCounts>true</threadCounts>
+              <idleTime>true</idleTime>
+              <connectTime>true</connectTime>
+            </value>
+          </objProp>
+          <stringProp name="filename"></stringProp>
+        </ResultCollector>
+        <hashTree/>
+      </hashTree>
+      <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="Authorization Header" enabled="true">
+        <collectionProp name="HeaderManager.headers">
+          <elementProp name="" elementType="Header">
+            <stringProp name="Header.name">Authorization</stringProp>
+            <stringProp name="Header.value">Bearer ${__P(AccessToken)}</stringProp>
+          </elementProp>
+        </collectionProp>
+      </HeaderManager>
+      <hashTree/>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Assets testing — asts" enabled="true">
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
+          <stringProp name="LoopController.loops">${asts_loop_count_default}</stringProp>
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+        </elementProp>
+        <stringProp name="ThreadGroup.num_threads">${asts_number_of_threads_default}</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">${asts_rump_up_period_default}</stringProp>
+        <boolProp name="ThreadGroup.delayedStart">true</boolProp>
+        <boolProp name="ThreadGroup.scheduler">false</boolProp>
+        <stringProp name="ThreadGroup.duration"></stringProp>
+        <stringProp name="ThreadGroup.delay"></stringProp>
+        <boolProp name="ThreadGroup.same_user_on_next_iteration">false</boolProp>
+      </ThreadGroup>
+      <hashTree>
+        <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="Base headers @Assets testing" enabled="true">
+          <collectionProp name="HeaderManager.headers">
+            <elementProp name="" elementType="Header">
+              <stringProp name="Header.name">Content-Type</stringProp>
+              <stringProp name="Header.value">application/json</stringProp>
+            </elementProp>
+            <elementProp name="" elementType="Header">
+              <stringProp name="Header.name">Connection</stringProp>
+              <stringProp name="Header.value">keep-alive</stringProp>
+            </elementProp>
+            <elementProp name="" elementType="Header">
+              <stringProp name="Header.name">Accept-Encoding</stringProp>
+              <stringProp name="Header.value">gzip, deflate, br</stringProp>
+            </elementProp>
+            <elementProp name="" elementType="Header">
+              <stringProp name="Header.name">Keep-Alive</stringProp>
+              <stringProp name="Header.value">true</stringProp>
+            </elementProp>
+            <elementProp name="" elementType="Header">
+              <stringProp name="Header.name">Accept</stringProp>
+              <stringProp name="Header.value">*/*</stringProp>
+            </elementProp>
+          </collectionProp>
+        </HeaderManager>
+        <hashTree/>
+        <JSR223Sampler guiclass="TestBeanGUI" testclass="JSR223Sampler" testname="Print variables @Assets testing" enabled="true">
+          <stringProp name="cacheKey">true</stringProp>
+          <stringProp name="filename"></stringProp>
+          <stringProp name="parameters"></stringProp>
+          <stringProp name="script">// log.info &quot;asts_ListAssets_loop_count: &quot; + vars.get(&quot;asts_ListAssets_loop_count&quot;)
+
+log.info &quot;Inside of Asset Testing Thread Group&quot;</stringProp>
+          <stringProp name="scriptLanguage">groovy</stringProp>
+        </JSR223Sampler>
+        <hashTree/>
+        <LoopController guiclass="LoopControlPanel" testclass="LoopController" testname="Loop over Running List Assets" enabled="true">
+          <stringProp name="LoopController.loops">${asts_ListAssets_loop_count}</stringProp>
+        </LoopController>
+        <hashTree>
+          <JSR223Sampler guiclass="TestBeanGUI" testclass="JSR223Sampler" testname="Debug loop Running List Assets" enabled="true">
+            <stringProp name="cacheKey">true</stringProp>
+            <stringProp name="filename"></stringProp>
+            <stringProp name="parameters"></stringProp>
+            <stringProp name="script">// log.info &quot;asts_ListAssets_loop_count: &quot; + vars.get(&quot;asts_ListAssets_loop_count&quot;)
+
+log.info &quot;Inside of Loop over Running List Assets&quot;</stringProp>
+            <stringProp name="scriptLanguage">groovy</stringProp>
+          </JSR223Sampler>
+          <hashTree/>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Retrive the list of assets" enabled="true">
+            <boolProp name="HTTPSampler.postBodyRaw">false</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="api-version" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                  <stringProp name="Argument.name">api-version</stringProp>
+                  <stringProp name="Argument.value">${api-version}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">${apiEndpoint}</stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.path">${listAssetsRequestPath}</stringProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <boolProp name="HTTPSampler.BROWSER_COMPATIBLE_MULTIPART">false</boolProp>
+            <boolProp name="HTTPSampler.image_parser">false</boolProp>
+            <boolProp name="HTTPSampler.concurrentDwn">false</boolProp>
+            <stringProp name="HTTPSampler.concurrentPool">6</stringProp>
+            <boolProp name="HTTPSampler.md5">false</boolProp>
+            <intProp name="HTTPSampler.ipSourceType">0</intProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <BeanShellPreProcessor guiclass="TestBeanGUI" testclass="BeanShellPreProcessor" testname="Prepare request path -&gt; Retrive the list of assets" enabled="true">
+              <boolProp name="resetInterpreter">false</boolProp>
+              <stringProp name="parameters"></stringProp>
+              <stringProp name="filename"></stringProp>
+              <stringProp name="script">// /subscriptions/${subscriptionId}/resourceGroups/${resourceGroup)/providers/Microsoft.Media/mediaServices/${accountName}/assets
+
+String request_path = &quot;/subscriptions/&quot;;
+request_path += vars.get(&quot;subscriptionId&quot;);
+request_path += &quot;/resourceGroups/&quot;;
+request_path += vars.get(&quot;resourceGroup&quot;);
+request_path += &quot;/providers/Microsoft.Media/mediaServices/&quot;;
+request_path += vars.get(&quot;accountName&quot;);
+request_path += &quot;/assets&quot;;
+
+// log.info(&quot;Request path is: &quot; + request_path);
+vars.put(&quot;listAssetsRequestPath&quot;, request_path);</stringProp>
+            </BeanShellPreProcessor>
+            <hashTree/>
+            <JSR223PostProcessor guiclass="TestBeanGUI" testclass="JSR223PostProcessor" testname="Parse list of assets from JSON response" enabled="true">
+              <stringProp name="cacheKey">true</stringProp>
+              <stringProp name="filename"></stringProp>
+              <stringProp name="parameters"></stringProp>
+              <stringProp name="script">import groovy.json.JsonSlurper
+
+String max_paths_to_retrive_as_string = vars.get(&quot;asts_max_number_of_assets_retrive&quot;)
+int max_paths_to_retrive = max_paths_to_retrive_as_string?.isInteger() ? max_paths_to_retrive_as_string as Integer : null
+
+def json_object = new JsonSlurper().parseText(prev.getResponseDataAsString())
+
+def list_of_assets = json_object.get(&quot;value&quot;)
+List&lt;String&gt; asset_id_list = new ArrayList&lt;&gt;()
+List&lt;String&gt; asset_name_list = new ArrayList&lt;&gt;()
+List&lt;String&gt; asset_path_list = new ArrayList&lt;&gt;()
+
+list_of_assets.eachWithIndex{next_asset,index-&gt;
+    String next_asset_id = next_asset.get(&quot;properties&quot;).get(&quot;assetId&quot;)
+    String next_asset_name = next_asset.get(&quot;name&quot;)
+    String next_asset_path = next_asset.get(&quot;id&quot;)
+    asset_id_list.add(next_asset_id)
+    asset_name_list.add(next_asset_name)
+    asset_path_list.add(next_asset_path)
+}
+
+vars.putObject(&quot;list_of_asset_ids&quot;, asset_id_list)
+//props.putObject(&quot;list_of_asset_ids&quot;, asset_id_list)
+
+vars.put(&quot;size_of_list_of_asset_ids&quot;, asset_id_list.size as String)
+props.put(&quot;size_of_list_of_asset_ids&quot;, asset_id_list.size as String)
+
+for(int i = 1; i &lt;= max_paths_to_retrive; i++){
+	def next_path = null
+	int random_index = 0
+	while(next_path == null){
+		random_index = new Random().nextInt(asset_path_list.size + 1)
+		next_path = asset_path_list[random_index]
+	}
+	String var_id = &quot;asset_path_&quot; + i
+	String var_name = &quot;asset_name_&quot; + i
+	vars.put(var_id, next_path)
+	props.put(var_id, next_path)
+
+	vars.put(var_name, asset_name_list.get(random_index))
+	props.put(var_name, asset_name_list.get(random_index))
+}
+</stringProp>
+              <stringProp name="scriptLanguage">groovy</stringProp>
+            </JSR223PostProcessor>
+            <hashTree/>
+          </hashTree>
+          <DebugSampler guiclass="TestBeanGUI" testclass="DebugSampler" testname="Debug Running List Assets" enabled="true">
+            <boolProp name="displayJMeterProperties">false</boolProp>
+            <boolProp name="displayJMeterVariables">true</boolProp>
+            <boolProp name="displaySystemProperties">false</boolProp>
+          </DebugSampler>
+          <hashTree/>
+          <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="Results of Running List Assets" enabled="true">
+            <boolProp name="ResultCollector.error_logging">false</boolProp>
+            <objProp>
+              <name>saveConfig</name>
+              <value class="SampleSaveConfiguration">
+                <time>true</time>
+                <latency>true</latency>
+                <timestamp>true</timestamp>
+                <success>true</success>
+                <label>true</label>
+                <code>true</code>
+                <message>true</message>
+                <threadName>true</threadName>
+                <dataType>true</dataType>
+                <encoding>false</encoding>
+                <assertions>true</assertions>
+                <subresults>true</subresults>
+                <responseData>false</responseData>
+                <samplerData>false</samplerData>
+                <xml>false</xml>
+                <fieldNames>true</fieldNames>
+                <responseHeaders>false</responseHeaders>
+                <requestHeaders>false</requestHeaders>
+                <responseDataOnError>false</responseDataOnError>
+                <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+                <assertionsResultsToSave>0</assertionsResultsToSave>
+                <bytes>true</bytes>
+                <sentBytes>true</sentBytes>
+                <url>true</url>
+                <threadCounts>true</threadCounts>
+                <idleTime>true</idleTime>
+                <connectTime>true</connectTime>
+              </value>
+            </objProp>
+            <stringProp name="filename"></stringProp>
+          </ResultCollector>
+          <hashTree/>
+        </hashTree>
+        <LoopController guiclass="LoopControlPanel" testclass="LoopController" testname="Loop over Running Get an Asset" enabled="true">
+          <stringProp name="LoopController.loops">${asts_GetAnAsset_loop_count}</stringProp>
+        </LoopController>
+        <hashTree>
+          <ForeachController guiclass="ForeachControlPanel" testclass="ForeachController" testname="Iterate each asset" enabled="true">
+            <stringProp name="ForeachController.inputVal">asset_path</stringProp>
+            <stringProp name="ForeachController.returnVal">current_asset_path</stringProp>
+            <boolProp name="ForeachController.useSeparator">true</boolProp>
+            <stringProp name="ForeachController.startIndex">1</stringProp>
+            <stringProp name="ForeachController.endIndex">${asts_max_number_of_assets_retrive}</stringProp>
+          </ForeachController>
+          <hashTree>
+            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Get an Asset" enabled="true">
+              <boolProp name="HTTPSampler.postBodyRaw">false</boolProp>
+              <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+                <collectionProp name="Arguments.arguments">
+                  <elementProp name="api-version" elementType="HTTPArgument">
+                    <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                    <stringProp name="Argument.metadata">=</stringProp>
+                    <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                    <stringProp name="Argument.name">api-version</stringProp>
+                    <stringProp name="Argument.value">${api-version}</stringProp>
+                  </elementProp>
+                </collectionProp>
+              </elementProp>
+              <stringProp name="HTTPSampler.domain">${apiEndpoint}</stringProp>
+              <stringProp name="HTTPSampler.port">443</stringProp>
+              <stringProp name="HTTPSampler.protocol">https</stringProp>
+              <stringProp name="HTTPSampler.path">${current_asset_path}</stringProp>
+              <stringProp name="HTTPSampler.method">GET</stringProp>
+              <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+              <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+              <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+              <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+              <boolProp name="HTTPSampler.BROWSER_COMPATIBLE_MULTIPART">false</boolProp>
+              <boolProp name="HTTPSampler.image_parser">false</boolProp>
+              <boolProp name="HTTPSampler.concurrentDwn">false</boolProp>
+              <stringProp name="HTTPSampler.concurrentPool">6</stringProp>
+              <boolProp name="HTTPSampler.md5">false</boolProp>
+              <intProp name="HTTPSampler.ipSourceType">0</intProp>
+            </HTTPSamplerProxy>
+            <hashTree/>
+          </hashTree>
+          <DebugSampler guiclass="TestBeanGUI" testclass="DebugSampler" testname="Debug Get an Asset" enabled="true">
+            <boolProp name="displayJMeterProperties">false</boolProp>
+            <boolProp name="displayJMeterVariables">true</boolProp>
+            <boolProp name="displaySystemProperties">false</boolProp>
+          </DebugSampler>
+          <hashTree/>
+          <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="Results of Get an Asset" enabled="true">
+            <boolProp name="ResultCollector.error_logging">false</boolProp>
+            <objProp>
+              <name>saveConfig</name>
+              <value class="SampleSaveConfiguration">
+                <time>true</time>
+                <latency>true</latency>
+                <timestamp>true</timestamp>
+                <success>true</success>
+                <label>true</label>
+                <code>true</code>
+                <message>true</message>
+                <threadName>true</threadName>
+                <dataType>true</dataType>
+                <encoding>false</encoding>
+                <assertions>true</assertions>
+                <subresults>true</subresults>
+                <responseData>false</responseData>
+                <samplerData>false</samplerData>
+                <xml>false</xml>
+                <fieldNames>true</fieldNames>
+                <responseHeaders>false</responseHeaders>
+                <requestHeaders>false</requestHeaders>
+                <responseDataOnError>false</responseDataOnError>
+                <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+                <assertionsResultsToSave>0</assertionsResultsToSave>
+                <bytes>true</bytes>
+                <sentBytes>true</sentBytes>
+                <url>true</url>
+                <threadCounts>true</threadCounts>
+                <idleTime>true</idleTime>
+                <connectTime>true</connectTime>
+              </value>
+            </objProp>
+            <stringProp name="filename"></stringProp>
+          </ResultCollector>
+          <hashTree/>
+        </hashTree>
+        <LoopController guiclass="LoopControlPanel" testclass="LoopController" testname="Loop over Create or Update and Asset" enabled="true">
+          <stringProp name="LoopController.loops">${asts_CreateOrUpdateAsset_loop_count}</stringProp>
+        </LoopController>
+        <hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Create or update an Asset" enabled="true">
+            <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">{}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">${apiEndpoint}</stringProp>
+            <stringProp name="HTTPSampler.port">443</stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.path">${createUpdateRequestPath}?api-version=${api-version}</stringProp>
+            <stringProp name="HTTPSampler.method">PUT</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <boolProp name="HTTPSampler.BROWSER_COMPATIBLE_MULTIPART">false</boolProp>
+            <boolProp name="HTTPSampler.image_parser">false</boolProp>
+            <boolProp name="HTTPSampler.concurrentDwn">false</boolProp>
+            <stringProp name="HTTPSampler.concurrentPool">6</stringProp>
+            <boolProp name="HTTPSampler.md5">false</boolProp>
+            <intProp name="HTTPSampler.ipSourceType">0</intProp>
+            <stringProp name="HTTPSampler.implementation">HttpClient4</stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <JSR223PreProcessor guiclass="TestBeanGUI" testclass="JSR223PreProcessor" testname="Prepare request path -&gt; Create or update an Asset" enabled="true">
+              <stringProp name="cacheKey">true</stringProp>
+              <stringProp name="filename"></stringProp>
+              <stringProp name="parameters"></stringProp>
+              <stringProp name="script">// /subscriptions/:subscriptionId/resourceGroups/:resourceGroup/providers/Microsoft.Media/mediaServices/:accountName/assets/:assetName?api-version={{api-version}}
+
+String request_path = &quot;/subscriptions/&quot;
+request_path += vars.get(&quot;subscriptionId&quot;)
+request_path += &quot;/resourceGroups/&quot;
+request_path += vars.get(&quot;resourceGroup&quot;)
+request_path += &quot;/providers/Microsoft.Media/mediaServices/&quot;
+request_path += vars.get(&quot;accountName&quot;)
+request_path += &quot;/assets/&quot;
+
+int length = vars.get(&quot;asts_assetname_random_string_length&quot;) as int // the size of the random string
+def pool = (&apos;a&apos;..&apos;z&apos;) + (&apos;A&apos;..&apos;Z&apos;) + (&apos;0&apos;..&apos;9&apos;) //.flatten() // generating pool
+Random random = new Random(System.currentTimeMillis())
+length -= 1
+// the loop should be from 0 to length – 1, then the char length would be length
+def randomChars = (0..length).collect { pool[random.nextInt(pool.size())] }
+String random_name = randomChars.join()
+
+request_path += random_name
+
+request_path += &quot;?api-version=&quot;
+request_path += vars.get(&quot;api-version&quot;)
+
+vars.put(&quot;createUpdateRequestPath&quot;, request_path)</stringProp>
+              <stringProp name="scriptLanguage">groovy</stringProp>
+            </JSR223PreProcessor>
+            <hashTree/>
+            <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="Results of Create or Update request" enabled="true">
+              <boolProp name="ResultCollector.error_logging">false</boolProp>
+              <objProp>
+                <name>saveConfig</name>
+                <value class="SampleSaveConfiguration">
+                  <time>true</time>
+                  <latency>true</latency>
+                  <timestamp>true</timestamp>
+                  <success>true</success>
+                  <label>true</label>
+                  <code>true</code>
+                  <message>true</message>
+                  <threadName>true</threadName>
+                  <dataType>true</dataType>
+                  <encoding>false</encoding>
+                  <assertions>true</assertions>
+                  <subresults>true</subresults>
+                  <responseData>false</responseData>
+                  <samplerData>false</samplerData>
+                  <xml>false</xml>
+                  <fieldNames>true</fieldNames>
+                  <responseHeaders>false</responseHeaders>
+                  <requestHeaders>false</requestHeaders>
+                  <responseDataOnError>false</responseDataOnError>
+                  <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+                  <assertionsResultsToSave>0</assertionsResultsToSave>
+                  <bytes>true</bytes>
+                  <sentBytes>true</sentBytes>
+                  <url>true</url>
+                  <threadCounts>true</threadCounts>
+                  <idleTime>true</idleTime>
+                  <connectTime>true</connectTime>
+                </value>
+              </objProp>
+              <stringProp name="filename"></stringProp>
+            </ResultCollector>
+            <hashTree/>
+          </hashTree>
+          <DebugSampler guiclass="TestBeanGUI" testclass="DebugSampler" testname="Debug Create or update an Asset" enabled="true">
+            <boolProp name="displayJMeterProperties">false</boolProp>
+            <boolProp name="displayJMeterVariables">true</boolProp>
+            <boolProp name="displaySystemProperties">false</boolProp>
+          </DebugSampler>
+          <hashTree/>
+          <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="Results of Create or update an Asset" enabled="true">
+            <boolProp name="ResultCollector.error_logging">false</boolProp>
+            <objProp>
+              <name>saveConfig</name>
+              <value class="SampleSaveConfiguration">
+                <time>true</time>
+                <latency>true</latency>
+                <timestamp>true</timestamp>
+                <success>true</success>
+                <label>true</label>
+                <code>true</code>
+                <message>true</message>
+                <threadName>true</threadName>
+                <dataType>true</dataType>
+                <encoding>false</encoding>
+                <assertions>true</assertions>
+                <subresults>true</subresults>
+                <responseData>false</responseData>
+                <samplerData>false</samplerData>
+                <xml>false</xml>
+                <fieldNames>true</fieldNames>
+                <responseHeaders>false</responseHeaders>
+                <requestHeaders>false</requestHeaders>
+                <responseDataOnError>false</responseDataOnError>
+                <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+                <assertionsResultsToSave>0</assertionsResultsToSave>
+                <bytes>true</bytes>
+                <sentBytes>true</sentBytes>
+                <url>true</url>
+                <threadCounts>true</threadCounts>
+                <idleTime>true</idleTime>
+                <connectTime>true</connectTime>
+              </value>
+            </objProp>
+            <stringProp name="filename"></stringProp>
+          </ResultCollector>
+          <hashTree/>
+        </hashTree>
+        <LoopController guiclass="LoopControlPanel" testclass="LoopController" testname="Loop over List the Asset URLs" enabled="true">
+          <stringProp name="LoopController.loops">${asts_ListAnAssetURLs_loop_count}</stringProp>
+        </LoopController>
+        <hashTree>
+          <ForeachController guiclass="ForeachControlPanel" testclass="ForeachController" testname="Iterate each asset" enabled="true">
+            <stringProp name="ForeachController.inputVal">asset_path</stringProp>
+            <stringProp name="ForeachController.returnVal">next_asset_path</stringProp>
+            <boolProp name="ForeachController.useSeparator">true</boolProp>
+            <stringProp name="ForeachController.startIndex">1</stringProp>
+            <stringProp name="ForeachController.endIndex">${asts_max_number_of_assets_retrive}</stringProp>
+          </ForeachController>
+          <hashTree>
+            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="List the Asset URLs" enabled="true">
+              <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+              <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+                <collectionProp name="Arguments.arguments">
+                  <elementProp name="" elementType="HTTPArgument">
+                    <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                    <stringProp name="Argument.value">{&#xd;
+  &quot;permissions&quot;: &quot;ReadWrite&quot;,&#xd;
+  &quot;expiryTime&quot;: &quot;2023-10-04T10:00:00.007Z&quot;&#xd;
+}</stringProp>
+                    <stringProp name="Argument.metadata">=</stringProp>
+                  </elementProp>
+                </collectionProp>
+              </elementProp>
+              <stringProp name="HTTPSampler.domain">${apiEndpoint}</stringProp>
+              <stringProp name="HTTPSampler.protocol">https</stringProp>
+              <stringProp name="HTTPSampler.path">${listAssetUrlsRequestPath}</stringProp>
+              <stringProp name="HTTPSampler.method">POST</stringProp>
+              <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+              <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+              <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+              <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+              <boolProp name="HTTPSampler.BROWSER_COMPATIBLE_MULTIPART">false</boolProp>
+              <boolProp name="HTTPSampler.image_parser">false</boolProp>
+              <boolProp name="HTTPSampler.concurrentDwn">false</boolProp>
+              <stringProp name="HTTPSampler.concurrentPool">6</stringProp>
+              <boolProp name="HTTPSampler.md5">false</boolProp>
+              <intProp name="HTTPSampler.ipSourceType">0</intProp>
+            </HTTPSamplerProxy>
+            <hashTree>
+              <JSR223PreProcessor guiclass="TestBeanGUI" testclass="JSR223PreProcessor" testname="Prepare request path -&gt; List the Asset URLs" enabled="true">
+                <stringProp name="scriptLanguage">groovy</stringProp>
+                <stringProp name="parameters"></stringProp>
+                <stringProp name="filename"></stringProp>
+                <stringProp name="cacheKey">true</stringProp>
+                <stringProp name="script">// /subscriptions/{{subscriptionId}}/resourceGroups/{{resourceGroup}}/providers/Microsoft.Media/mediaServices/{{accountName}}/assets/:assetName/listContainerSas?api-version={{api-version}}
+// /subscriptions/f0d5c515-ed20-49fd-a9c5-d3b336f7df5a/resourceGroups/rg-rms-perftest-westeurope/providers/Microsoft.Media/mediaServices/default/assets/0vWW1UGd5V
+
+String request_path = vars.get(&quot;next_asset_path&quot;)
+request_path += &quot;/listContainerSas?api-version=&quot;
+request_path += vars.get(&quot;api-version&quot;)
+vars.put(&quot;listAssetUrlsRequestPath&quot;, request_path)</stringProp>
+              </JSR223PreProcessor>
+              <hashTree/>
+              <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="Results of List the Asset URLs" enabled="true">
+                <boolProp name="ResultCollector.error_logging">false</boolProp>
+                <objProp>
+                  <name>saveConfig</name>
+                  <value class="SampleSaveConfiguration">
+                    <time>true</time>
+                    <latency>true</latency>
+                    <timestamp>true</timestamp>
+                    <success>true</success>
+                    <label>true</label>
+                    <code>true</code>
+                    <message>true</message>
+                    <threadName>true</threadName>
+                    <dataType>true</dataType>
+                    <encoding>false</encoding>
+                    <assertions>true</assertions>
+                    <subresults>true</subresults>
+                    <responseData>false</responseData>
+                    <samplerData>false</samplerData>
+                    <xml>false</xml>
+                    <fieldNames>true</fieldNames>
+                    <responseHeaders>false</responseHeaders>
+                    <requestHeaders>false</requestHeaders>
+                    <responseDataOnError>false</responseDataOnError>
+                    <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+                    <assertionsResultsToSave>0</assertionsResultsToSave>
+                    <bytes>true</bytes>
+                    <sentBytes>true</sentBytes>
+                    <url>true</url>
+                    <threadCounts>true</threadCounts>
+                    <idleTime>true</idleTime>
+                    <connectTime>true</connectTime>
+                  </value>
+                </objProp>
+                <stringProp name="filename"></stringProp>
+              </ResultCollector>
+              <hashTree/>
+            </hashTree>
+          </hashTree>
+          <DebugSampler guiclass="TestBeanGUI" testclass="DebugSampler" testname="Debug List the Asset URLs" enabled="true">
+            <boolProp name="displayJMeterProperties">false</boolProp>
+            <boolProp name="displayJMeterVariables">true</boolProp>
+            <boolProp name="displaySystemProperties">false</boolProp>
+          </DebugSampler>
+          <hashTree/>
+          <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="Results of List the Asset URLs" enabled="true">
+            <boolProp name="ResultCollector.error_logging">false</boolProp>
+            <objProp>
+              <name>saveConfig</name>
+              <value class="SampleSaveConfiguration">
+                <time>true</time>
+                <latency>true</latency>
+                <timestamp>true</timestamp>
+                <success>true</success>
+                <label>true</label>
+                <code>true</code>
+                <message>true</message>
+                <threadName>true</threadName>
+                <dataType>true</dataType>
+                <encoding>false</encoding>
+                <assertions>true</assertions>
+                <subresults>true</subresults>
+                <responseData>false</responseData>
+                <samplerData>false</samplerData>
+                <xml>false</xml>
+                <fieldNames>true</fieldNames>
+                <responseHeaders>false</responseHeaders>
+                <requestHeaders>false</requestHeaders>
+                <responseDataOnError>false</responseDataOnError>
+                <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+                <assertionsResultsToSave>0</assertionsResultsToSave>
+                <bytes>true</bytes>
+                <sentBytes>true</sentBytes>
+                <url>true</url>
+                <threadCounts>true</threadCounts>
+                <idleTime>true</idleTime>
+                <connectTime>true</connectTime>
+              </value>
+            </objProp>
+            <stringProp name="filename"></stringProp>
+          </ResultCollector>
+          <hashTree/>
+        </hashTree>
+        <LoopController guiclass="LoopControlPanel" testclass="LoopController" testname="Loop over List Streaming Locators" enabled="true">
+          <stringProp name="LoopController.loops">${asts_ListStreamingLocators_loop_count}</stringProp>
+        </LoopController>
+        <hashTree>
+          <ForeachController guiclass="ForeachControlPanel" testclass="ForeachController" testname="Iterate each asset" enabled="true">
+            <stringProp name="ForeachController.inputVal">asset_path</stringProp>
+            <stringProp name="ForeachController.returnVal">next_asset_path</stringProp>
+            <boolProp name="ForeachController.useSeparator">true</boolProp>
+            <stringProp name="ForeachController.startIndex">1</stringProp>
+            <stringProp name="ForeachController.endIndex">${asts_max_number_of_assets_retrive}</stringProp>
+          </ForeachController>
+          <hashTree>
+            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="List Streaming Locators" enabled="true">
+              <boolProp name="HTTPSampler.postBodyRaw">false</boolProp>
+              <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+                <collectionProp name="Arguments.arguments"/>
+              </elementProp>
+              <stringProp name="HTTPSampler.domain">${apiEndpoint}</stringProp>
+              <stringProp name="HTTPSampler.protocol">https</stringProp>
+              <stringProp name="HTTPSampler.path">${listStreamingLocatorsRequestPath}</stringProp>
+              <stringProp name="HTTPSampler.method">POST</stringProp>
+              <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+              <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+              <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+              <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+              <boolProp name="HTTPSampler.BROWSER_COMPATIBLE_MULTIPART">false</boolProp>
+              <boolProp name="HTTPSampler.image_parser">false</boolProp>
+              <boolProp name="HTTPSampler.concurrentDwn">false</boolProp>
+              <stringProp name="HTTPSampler.concurrentPool">6</stringProp>
+              <boolProp name="HTTPSampler.md5">false</boolProp>
+              <intProp name="HTTPSampler.ipSourceType">0</intProp>
+            </HTTPSamplerProxy>
+            <hashTree>
+              <JSR223PreProcessor guiclass="TestBeanGUI" testclass="JSR223PreProcessor" testname="Prepare request path -&gt; List Streaming Locators" enabled="true">
+                <stringProp name="scriptLanguage">groovy</stringProp>
+                <stringProp name="parameters"></stringProp>
+                <stringProp name="filename"></stringProp>
+                <stringProp name="cacheKey">true</stringProp>
+                <stringProp name="script">// /subscriptions/:subscriptionId/resourceGroups/:resourceGroup/providers/Microsoft.Media/mediaServices/:accountName/assets/:assetName/listStreamingLocators?api-version={{api-version}}
+
+String request_path = vars.get(&quot;next_asset_path&quot;)
+request_path += &quot;/listStreamingLocators?api-version=&quot;
+request_path += vars.get(&quot;api-version&quot;)
+vars.put(&quot;listStreamingLocatorsRequestPath&quot;, request_path)</stringProp>
+              </JSR223PreProcessor>
+              <hashTree/>
+              <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="Results of List Streaming Locators" enabled="true">
+                <boolProp name="ResultCollector.error_logging">false</boolProp>
+                <objProp>
+                  <name>saveConfig</name>
+                  <value class="SampleSaveConfiguration">
+                    <time>true</time>
+                    <latency>true</latency>
+                    <timestamp>true</timestamp>
+                    <success>true</success>
+                    <label>true</label>
+                    <code>true</code>
+                    <message>true</message>
+                    <threadName>true</threadName>
+                    <dataType>true</dataType>
+                    <encoding>false</encoding>
+                    <assertions>true</assertions>
+                    <subresults>true</subresults>
+                    <responseData>false</responseData>
+                    <samplerData>false</samplerData>
+                    <xml>false</xml>
+                    <fieldNames>true</fieldNames>
+                    <responseHeaders>false</responseHeaders>
+                    <requestHeaders>false</requestHeaders>
+                    <responseDataOnError>false</responseDataOnError>
+                    <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+                    <assertionsResultsToSave>0</assertionsResultsToSave>
+                    <bytes>true</bytes>
+                    <sentBytes>true</sentBytes>
+                    <url>true</url>
+                    <threadCounts>true</threadCounts>
+                    <idleTime>true</idleTime>
+                    <connectTime>true</connectTime>
+                  </value>
+                </objProp>
+                <stringProp name="filename"></stringProp>
+              </ResultCollector>
+              <hashTree/>
+            </hashTree>
+          </hashTree>
+        </hashTree>
+        <DebugSampler guiclass="TestBeanGUI" testclass="DebugSampler" testname="Debug Asset Testing Thread" enabled="true">
+          <boolProp name="displayJMeterProperties">true</boolProp>
+          <boolProp name="displayJMeterVariables">true</boolProp>
+          <boolProp name="displaySystemProperties">false</boolProp>
+        </DebugSampler>
+        <hashTree/>
+        <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="Results of Asset Testing Thread" enabled="true">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>true</message>
+              <threadName>true</threadName>
+              <dataType>true</dataType>
+              <encoding>false</encoding>
+              <assertions>true</assertions>
+              <subresults>true</subresults>
+              <responseData>false</responseData>
+              <samplerData>false</samplerData>
+              <xml>false</xml>
+              <fieldNames>true</fieldNames>
+              <responseHeaders>false</responseHeaders>
+              <requestHeaders>false</requestHeaders>
+              <responseDataOnError>false</responseDataOnError>
+              <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <bytes>true</bytes>
+              <sentBytes>true</sentBytes>
+              <url>true</url>
+              <threadCounts>true</threadCounts>
+              <idleTime>true</idleTime>
+              <connectTime>true</connectTime>
+            </value>
+          </objProp>
+          <stringProp name="filename"></stringProp>
+        </ResultCollector>
+        <hashTree/>
+      </hashTree>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Streaming Policies and Locators Testing — spl" enabled="true">
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
+          <stringProp name="LoopController.loops">${spl_loop_count_default}</stringProp>
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+        </elementProp>
+        <stringProp name="ThreadGroup.num_threads">${spl_number_of_threads_default}</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">${spl_rump_up_period_default}</stringProp>
+        <boolProp name="ThreadGroup.delayedStart">true</boolProp>
+        <boolProp name="ThreadGroup.scheduler">false</boolProp>
+        <stringProp name="ThreadGroup.duration"></stringProp>
+        <stringProp name="ThreadGroup.delay"></stringProp>
+        <boolProp name="ThreadGroup.same_user_on_next_iteration">false</boolProp>
+      </ThreadGroup>
+      <hashTree>
+        <JSR223Sampler guiclass="TestBeanGUI" testclass="JSR223Sampler" testname="Translate global vars to local @spl" enabled="true">
+          <stringProp name="scriptLanguage">groovy</stringProp>
+          <stringProp name="parameters"></stringProp>
+          <stringProp name="filename"></stringProp>
+          <stringProp name="cacheKey">true</stringProp>
+          <stringProp name="script">String base_id = &quot;asset_path_&quot;
+String base_name = &quot;asset_name_&quot;
+
+String max_paths_to_retrive_as_string = vars.get(&quot;asts_max_number_of_assets_retrive&quot;)
+
+int max_paths_to_retrive = 2
+
+if(max_paths_to_retrive_as_string != null){
+	max_paths_to_retrive = max_paths_to_retrive_as_string?.isInteger() ? max_paths_to_retrive_as_string as java.lang.Integer : max_paths_to_retrive
+}
+
+for(int i = 1; i &lt;= max_paths_to_retrive; i++){
+	String var_id = base_id + i
+	String var_name = base_name + i
+	vars.put(var_id, props.get(var_id))
+	vars.put(var_name, props.get(var_name))
+}
+
+log.info &quot;Inside of translating script @Streaming Policies and Locators Testing&quot;
+</stringProp>
+        </JSR223Sampler>
+        <hashTree/>
+        <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="Base headers @Streaming Policies and Locators Testing" enabled="true">
+          <collectionProp name="HeaderManager.headers">
+            <elementProp name="" elementType="Header">
+              <stringProp name="Header.name">Content-Type</stringProp>
+              <stringProp name="Header.value">application/json</stringProp>
+            </elementProp>
+            <elementProp name="" elementType="Header">
+              <stringProp name="Header.name">Connection</stringProp>
+              <stringProp name="Header.value">keep-alive</stringProp>
+            </elementProp>
+            <elementProp name="" elementType="Header">
+              <stringProp name="Header.name">Accept-Encoding</stringProp>
+              <stringProp name="Header.value">gzip, deflate, br</stringProp>
+            </elementProp>
+            <elementProp name="" elementType="Header">
+              <stringProp name="Header.name">Keep-Alive</stringProp>
+              <stringProp name="Header.value">true</stringProp>
+            </elementProp>
+            <elementProp name="" elementType="Header">
+              <stringProp name="Header.name">Accept</stringProp>
+              <stringProp name="Header.value">*/*</stringProp>
+            </elementProp>
+          </collectionProp>
+        </HeaderManager>
+        <hashTree/>
+        <LoopController guiclass="LoopControlPanel" testclass="LoopController" testname="Loop over List Streaming Policies" enabled="true">
+          <stringProp name="LoopController.loops">${spl_ListStreamingPolicies_loop_count}</stringProp>
+        </LoopController>
+        <hashTree>
+          <JSR223Sampler guiclass="TestBeanGUI" testclass="JSR223Sampler" testname="Debug loop List Streaming Policies" enabled="true">
+            <stringProp name="scriptLanguage">groovy</stringProp>
+            <stringProp name="parameters"></stringProp>
+            <stringProp name="filename"></stringProp>
+            <stringProp name="cacheKey">true</stringProp>
+            <stringProp name="script">log.info &quot;Inside of the Loop over List Streaming Policies&quot;</stringProp>
+          </JSR223Sampler>
+          <hashTree/>
+          <ForeachController guiclass="ForeachControlPanel" testclass="ForeachController" testname="Iterate each asset" enabled="true">
+            <stringProp name="ForeachController.inputVal">asset_path</stringProp>
+            <stringProp name="ForeachController.returnVal">next_asset_path_</stringProp>
+            <boolProp name="ForeachController.useSeparator">true</boolProp>
+            <stringProp name="ForeachController.startIndex">1</stringProp>
+            <stringProp name="ForeachController.endIndex">${asts_max_number_of_assets_retrive}</stringProp>
+          </ForeachController>
+          <hashTree>
+            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="List Streaming Policies" enabled="true">
+              <boolProp name="HTTPSampler.postBodyRaw">false</boolProp>
+              <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+                <collectionProp name="Arguments.arguments"/>
+              </elementProp>
+              <stringProp name="HTTPSampler.domain">${apiEndpoint}</stringProp>
+              <stringProp name="HTTPSampler.port">443</stringProp>
+              <stringProp name="HTTPSampler.protocol">https</stringProp>
+              <stringProp name="HTTPSampler.path">${streamingPoliciesRequestPath}</stringProp>
+              <stringProp name="HTTPSampler.method">GET</stringProp>
+              <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+              <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+              <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+              <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+              <boolProp name="HTTPSampler.BROWSER_COMPATIBLE_MULTIPART">false</boolProp>
+              <boolProp name="HTTPSampler.image_parser">false</boolProp>
+              <boolProp name="HTTPSampler.concurrentDwn">false</boolProp>
+              <stringProp name="HTTPSampler.concurrentPool">6</stringProp>
+              <boolProp name="HTTPSampler.md5">false</boolProp>
+              <intProp name="HTTPSampler.ipSourceType">0</intProp>
+            </HTTPSamplerProxy>
+            <hashTree>
+              <JSR223PreProcessor guiclass="TestBeanGUI" testclass="JSR223PreProcessor" testname="Prepare request path -&gt; List Streaming Policies" enabled="true">
+                <stringProp name="scriptLanguage">groovy</stringProp>
+                <stringProp name="parameters"></stringProp>
+                <stringProp name="filename"></stringProp>
+                <stringProp name="cacheKey">true</stringProp>
+                <stringProp name="script">// /subscriptions/:subscriptionId/resourceGroups/:resourceGroup/providers/Microsoft.Media/mediaServices/:accountName/streamingPolicies?api-version={{api-version}}
+
+String request_path = &quot;/subscriptions/&quot;;
+request_path += vars.get(&quot;subscriptionId&quot;);
+request_path += &quot;/resourceGroups/&quot;;
+request_path += vars.get(&quot;resourceGroup&quot;);
+request_path += &quot;/providers/Microsoft.Media/mediaServices/&quot;;
+request_path += vars.get(&quot;accountName&quot;);
+request_path += &quot;/streamingPolicies?api-version=&quot;
+request_path += vars.get(&quot;api-version&quot;)
+
+vars.put(&quot;streamingPoliciesRequestPath&quot;, request_path)
+
+log.info &quot;streamingPoliciesRequestPath: &quot; + request_path</stringProp>
+              </JSR223PreProcessor>
+              <hashTree/>
+            </hashTree>
+            <DebugSampler guiclass="TestBeanGUI" testclass="DebugSampler" testname="Debug List Streaming Policies" enabled="true">
+              <boolProp name="displayJMeterProperties">true</boolProp>
+              <boolProp name="displayJMeterVariables">true</boolProp>
+              <boolProp name="displaySystemProperties">false</boolProp>
+            </DebugSampler>
+            <hashTree/>
+            <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="Results of List Streaming Policies" enabled="true">
+              <boolProp name="ResultCollector.error_logging">false</boolProp>
+              <objProp>
+                <name>saveConfig</name>
+                <value class="SampleSaveConfiguration">
+                  <time>true</time>
+                  <latency>true</latency>
+                  <timestamp>true</timestamp>
+                  <success>true</success>
+                  <label>true</label>
+                  <code>true</code>
+                  <message>true</message>
+                  <threadName>true</threadName>
+                  <dataType>true</dataType>
+                  <encoding>false</encoding>
+                  <assertions>true</assertions>
+                  <subresults>true</subresults>
+                  <responseData>false</responseData>
+                  <samplerData>false</samplerData>
+                  <xml>false</xml>
+                  <fieldNames>true</fieldNames>
+                  <responseHeaders>false</responseHeaders>
+                  <requestHeaders>false</requestHeaders>
+                  <responseDataOnError>false</responseDataOnError>
+                  <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+                  <assertionsResultsToSave>0</assertionsResultsToSave>
+                  <bytes>true</bytes>
+                  <sentBytes>true</sentBytes>
+                  <url>true</url>
+                  <threadCounts>true</threadCounts>
+                  <idleTime>true</idleTime>
+                  <connectTime>true</connectTime>
+                </value>
+              </objProp>
+              <stringProp name="filename"></stringProp>
+            </ResultCollector>
+            <hashTree/>
+          </hashTree>
+        </hashTree>
+        <LoopController guiclass="LoopControlPanel" testclass="LoopController" testname="Loop over List Streaming Locators" enabled="true">
+          <stringProp name="LoopController.loops">${spl_ListStreamingLocators_loop_count}</stringProp>
+        </LoopController>
+        <hashTree>
+          <JSR223Sampler guiclass="TestBeanGUI" testclass="JSR223Sampler" testname="Debug loop List Streaming Locators" enabled="true">
+            <stringProp name="scriptLanguage">groovy</stringProp>
+            <stringProp name="parameters"></stringProp>
+            <stringProp name="filename"></stringProp>
+            <stringProp name="cacheKey">true</stringProp>
+            <stringProp name="script">log.info &quot;Inside of the List Streaming Locators&quot;</stringProp>
+          </JSR223Sampler>
+          <hashTree/>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="List Streaming Locators" enabled="true">
+            <boolProp name="HTTPSampler.postBodyRaw">false</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+              <collectionProp name="Arguments.arguments"/>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">${apiEndpoint}</stringProp>
+            <stringProp name="HTTPSampler.port">443</stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.path">${streamingLocatorsRequestPath}</stringProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <boolProp name="HTTPSampler.BROWSER_COMPATIBLE_MULTIPART">false</boolProp>
+            <boolProp name="HTTPSampler.image_parser">false</boolProp>
+            <boolProp name="HTTPSampler.concurrentDwn">false</boolProp>
+            <stringProp name="HTTPSampler.concurrentPool">6</stringProp>
+            <boolProp name="HTTPSampler.md5">false</boolProp>
+            <intProp name="HTTPSampler.ipSourceType">0</intProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <JSR223PreProcessor guiclass="TestBeanGUI" testclass="JSR223PreProcessor" testname="Prepare request path -&gt; List Streaming Locators" enabled="true">
+              <stringProp name="scriptLanguage">groovy</stringProp>
+              <stringProp name="parameters"></stringProp>
+              <stringProp name="filename"></stringProp>
+              <stringProp name="cacheKey">true</stringProp>
+              <stringProp name="script">// /subscriptions/:subscriptionId/resourceGroups/:resourceGroup/providers/Microsoft.Media/mediaServices/:accountName/streamingLocators?api-version={{api-version}}
+
+String request_path = &quot;/subscriptions/&quot;;
+request_path += vars.get(&quot;subscriptionId&quot;);
+request_path += &quot;/resourceGroups/&quot;;
+request_path += vars.get(&quot;resourceGroup&quot;);
+request_path += &quot;/providers/Microsoft.Media/mediaServices/&quot;;
+request_path += vars.get(&quot;accountName&quot;);
+request_path += &quot;/streamingLocators?api-version=&quot;
+request_path += vars.get(&quot;api-version&quot;)
+
+vars.put(&quot;streamingLocatorsRequestPath&quot;, request_path)
+
+// log.info &quot;streamingPoliciesRequestPath: &quot; + request_path</stringProp>
+            </JSR223PreProcessor>
+            <hashTree/>
+            <JSR223PostProcessor guiclass="TestBeanGUI" testclass="JSR223PostProcessor" testname="Parse list of streaming locators from JSON responce" enabled="true">
+              <stringProp name="scriptLanguage">groovy</stringProp>
+              <stringProp name="parameters"></stringProp>
+              <stringProp name="filename"></stringProp>
+              <stringProp name="cacheKey">true</stringProp>
+              <stringProp name="script">import groovy.json.JsonSlurper
+
+def json_object = new JsonSlurper().parseText(prev.getResponseDataAsString())
+
+def list_of_locator_objects = json_object.get(&quot;value&quot;)
+
+List&lt;String&gt; locator_path_list = new ArrayList&lt;&gt;()
+List&lt;String&gt; locator_name_list = new ArrayList&lt;&gt;()
+List&lt;String&gt; locator_id_list = new ArrayList&lt;&gt;()
+
+list_of_locator_objects.eachWithIndex{next_locator,index-&gt;
+	String next_locator_name = next_locator.get(&quot;name&quot;)
+	String next_locator_id = next_locator.get(&quot;properties&quot;).get(&quot;streamingLocatorId&quot;)
+	String next_locator_path = next_locator.get(&quot;id&quot;)
+	locator_path_list.add(next_locator_path)
+	locator_name_list.add(next_locator_name)
+	locator_id_list.add(next_locator_id)
+	
+	vars.put(&quot;locator_path_&quot; + (index + 1), next_locator_path)
+	vars.put(&quot;locator_name_&quot; + (index + 1), next_locator_name)
+}
+
+vars.put(&quot;total_locators_count&quot;, locator_path_list.size as String)</stringProp>
+            </JSR223PostProcessor>
+            <hashTree/>
+          </hashTree>
+          <DebugSampler guiclass="TestBeanGUI" testclass="DebugSampler" testname="Debug List Streaming Locators" enabled="true">
+            <boolProp name="displayJMeterProperties">false</boolProp>
+            <boolProp name="displayJMeterVariables">true</boolProp>
+            <boolProp name="displaySystemProperties">false</boolProp>
+          </DebugSampler>
+          <hashTree/>
+          <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="Results of List Streaming Locators" enabled="true">
+            <boolProp name="ResultCollector.error_logging">false</boolProp>
+            <objProp>
+              <name>saveConfig</name>
+              <value class="SampleSaveConfiguration">
+                <time>true</time>
+                <latency>true</latency>
+                <timestamp>true</timestamp>
+                <success>true</success>
+                <label>true</label>
+                <code>true</code>
+                <message>true</message>
+                <threadName>true</threadName>
+                <dataType>true</dataType>
+                <encoding>false</encoding>
+                <assertions>true</assertions>
+                <subresults>true</subresults>
+                <responseData>false</responseData>
+                <samplerData>false</samplerData>
+                <xml>false</xml>
+                <fieldNames>true</fieldNames>
+                <responseHeaders>false</responseHeaders>
+                <requestHeaders>false</requestHeaders>
+                <responseDataOnError>false</responseDataOnError>
+                <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+                <assertionsResultsToSave>0</assertionsResultsToSave>
+                <bytes>true</bytes>
+                <sentBytes>true</sentBytes>
+                <url>true</url>
+                <threadCounts>true</threadCounts>
+                <idleTime>true</idleTime>
+                <connectTime>true</connectTime>
+              </value>
+            </objProp>
+            <stringProp name="filename"></stringProp>
+          </ResultCollector>
+          <hashTree/>
+        </hashTree>
+        <LoopController guiclass="LoopControlPanel" testclass="LoopController" testname="Loop over Get a Streaming Locator" enabled="true">
+          <stringProp name="LoopController.loops">${spl_GetStreamingLocator_loop_count}</stringProp>
+        </LoopController>
+        <hashTree>
+          <JSR223Sampler guiclass="TestBeanGUI" testclass="JSR223Sampler" testname="Debug loop Get a Streaming Locator" enabled="true">
+            <stringProp name="scriptLanguage">groovy</stringProp>
+            <stringProp name="parameters"></stringProp>
+            <stringProp name="filename"></stringProp>
+            <stringProp name="cacheKey">true</stringProp>
+            <stringProp name="script">log.info &quot;Inside of the Get a Streaming Locator&quot;</stringProp>
+          </JSR223Sampler>
+          <hashTree/>
+          <ForeachController guiclass="ForeachControlPanel" testclass="ForeachController" testname="Iterate each locator" enabled="true">
+            <stringProp name="ForeachController.inputVal">locator_path</stringProp>
+            <stringProp name="ForeachController.returnVal">next_locator_path</stringProp>
+            <boolProp name="ForeachController.useSeparator">true</boolProp>
+            <stringProp name="ForeachController.startIndex">1</stringProp>
+            <stringProp name="ForeachController.endIndex">${total_locators_count}</stringProp>
+          </ForeachController>
+          <hashTree>
+            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Get a Streaming Locator" enabled="true">
+              <boolProp name="HTTPSampler.postBodyRaw">false</boolProp>
+              <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+                <collectionProp name="Arguments.arguments"/>
+              </elementProp>
+              <stringProp name="HTTPSampler.domain">${apiEndpoint}</stringProp>
+              <stringProp name="HTTPSampler.port">443</stringProp>
+              <stringProp name="HTTPSampler.protocol">https</stringProp>
+              <stringProp name="HTTPSampler.method">GET</stringProp>
+              <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+              <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+              <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+              <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+              <boolProp name="HTTPSampler.BROWSER_COMPATIBLE_MULTIPART">false</boolProp>
+              <boolProp name="HTTPSampler.image_parser">false</boolProp>
+              <boolProp name="HTTPSampler.concurrentDwn">false</boolProp>
+              <stringProp name="HTTPSampler.concurrentPool">6</stringProp>
+              <boolProp name="HTTPSampler.md5">false</boolProp>
+              <intProp name="HTTPSampler.ipSourceType">0</intProp>
+            </HTTPSamplerProxy>
+            <hashTree>
+              <JSR223PreProcessor guiclass="TestBeanGUI" testclass="JSR223PreProcessor" testname="Prepare request path -&gt; Get a Streaming Locator" enabled="true">
+                <stringProp name="scriptLanguage">groovy</stringProp>
+                <stringProp name="parameters"></stringProp>
+                <stringProp name="filename"></stringProp>
+                <stringProp name="cacheKey">true</stringProp>
+                <stringProp name="script">// /subscriptions/:subscriptionId/resourceGroups/:resourceGroup/providers/Microsoft.Media/mediaServices/:accountName/streamingLocators/:streamingLocatorName?api-version={{api-version}}
+
+String request_path = vars.get(&quot;next_locator_path&quot;)
+request_path += &quot;?api-version=&quot;
+request_path += vars.get(&quot;api-version&quot;)
+vars.put(&quot;getStreamingLocatorRequestPath&quot;, request_path)
+
+// log.info &quot;getStreamingLocatorRequestPath: &quot; + request_path</stringProp>
+              </JSR223PreProcessor>
+              <hashTree/>
+            </hashTree>
+          </hashTree>
+          <DebugSampler guiclass="TestBeanGUI" testclass="DebugSampler" testname="Debug Get a Streaming Locator" enabled="true">
+            <boolProp name="displayJMeterProperties">false</boolProp>
+            <boolProp name="displayJMeterVariables">true</boolProp>
+            <boolProp name="displaySystemProperties">false</boolProp>
+          </DebugSampler>
+          <hashTree/>
+          <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="Results of Get a Streaming Locator" enabled="true">
+            <boolProp name="ResultCollector.error_logging">false</boolProp>
+            <objProp>
+              <name>saveConfig</name>
+              <value class="SampleSaveConfiguration">
+                <time>true</time>
+                <latency>true</latency>
+                <timestamp>true</timestamp>
+                <success>true</success>
+                <label>true</label>
+                <code>true</code>
+                <message>true</message>
+                <threadName>true</threadName>
+                <dataType>true</dataType>
+                <encoding>false</encoding>
+                <assertions>true</assertions>
+                <subresults>true</subresults>
+                <responseData>false</responseData>
+                <samplerData>false</samplerData>
+                <xml>false</xml>
+                <fieldNames>true</fieldNames>
+                <responseHeaders>false</responseHeaders>
+                <requestHeaders>false</requestHeaders>
+                <responseDataOnError>false</responseDataOnError>
+                <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+                <assertionsResultsToSave>0</assertionsResultsToSave>
+                <bytes>true</bytes>
+                <sentBytes>true</sentBytes>
+                <url>true</url>
+                <threadCounts>true</threadCounts>
+                <idleTime>true</idleTime>
+                <connectTime>true</connectTime>
+              </value>
+            </objProp>
+            <stringProp name="filename"></stringProp>
+          </ResultCollector>
+          <hashTree/>
+        </hashTree>
+        <LoopController guiclass="LoopControlPanel" testclass="LoopController" testname="Loop over Create a Streaming Locator (clear)" enabled="true">
+          <stringProp name="LoopController.loops">${spl_CreateStreamingLocator_loop_count}</stringProp>
+        </LoopController>
+        <hashTree>
+          <ForeachController guiclass="ForeachControlPanel" testclass="ForeachController" testname="Iterate each asset" enabled="true">
+            <stringProp name="ForeachController.inputVal">asset_name</stringProp>
+            <stringProp name="ForeachController.returnVal">next_asset_name_for_creating_locator</stringProp>
+            <boolProp name="ForeachController.useSeparator">true</boolProp>
+            <stringProp name="ForeachController.startIndex">1</stringProp>
+            <stringProp name="ForeachController.endIndex">${asts_max_number_of_assets_retrive}</stringProp>
+          </ForeachController>
+          <hashTree>
+            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Create a Streaming Locator (clear)" enabled="true">
+              <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+              <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+                <collectionProp name="Arguments.arguments">
+                  <elementProp name="" elementType="HTTPArgument">
+                    <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                    <stringProp name="Argument.value">{&#xd;
+  &quot;properties&quot;: {&#xd;
+    &quot;streamingPolicyName&quot;: &quot;Predefined_DownloadAndClearStreaming&quot;,&#xd;
+    &quot;assetName&quot;: &quot;${next_asset_name_for_creating_locator}&quot;,&#xd;
+    &quot;endTime&quot;: &quot;2024-09-26T03:30:56.466196Z&quot;,&#xd;
+    &quot;contentKeys&quot;: [],&#xd;
+    &quot;filters&quot;: []&#xd;
+ }&#xd;
+}</stringProp>
+                    <stringProp name="Argument.metadata">=</stringProp>
+                  </elementProp>
+                </collectionProp>
+              </elementProp>
+              <stringProp name="HTTPSampler.domain">${apiEndpoint}</stringProp>
+              <stringProp name="HTTPSampler.port">443</stringProp>
+              <stringProp name="HTTPSampler.protocol">https</stringProp>
+              <stringProp name="HTTPSampler.path">${createStreamingLocatorRequestPath}</stringProp>
+              <stringProp name="HTTPSampler.method">PUT</stringProp>
+              <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+              <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+              <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+              <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+              <boolProp name="HTTPSampler.BROWSER_COMPATIBLE_MULTIPART">false</boolProp>
+              <boolProp name="HTTPSampler.image_parser">false</boolProp>
+              <boolProp name="HTTPSampler.concurrentDwn">false</boolProp>
+              <stringProp name="HTTPSampler.concurrentPool">6</stringProp>
+              <boolProp name="HTTPSampler.md5">false</boolProp>
+              <intProp name="HTTPSampler.ipSourceType">0</intProp>
+            </HTTPSamplerProxy>
+            <hashTree>
+              <JSR223PreProcessor guiclass="TestBeanGUI" testclass="JSR223PreProcessor" testname="Prepare request path -&gt; Create a Streaming Locator (clear)" enabled="true">
+                <stringProp name="scriptLanguage">groovy</stringProp>
+                <stringProp name="parameters"></stringProp>
+                <stringProp name="filename"></stringProp>
+                <stringProp name="cacheKey">true</stringProp>
+                <stringProp name="script">// /subscriptions/:subscriptionId/resourceGroups/:resourceGroup/providers/Microsoft.Media/mediaServices/:accountName/streamingLocators/:streamingLocatorName?api-version={{api-version}}
+
+String request_path = &quot;/subscriptions/&quot;
+request_path += vars.get(&quot;subscriptionId&quot;)
+request_path += &quot;/resourceGroups/&quot;
+request_path += vars.get(&quot;resourceGroup&quot;)
+request_path += &quot;/providers/Microsoft.Media/mediaServices/&quot;
+request_path += vars.get(&quot;accountName&quot;)
+request_path += &quot;/streamingLocators/&quot;
+
+int length = vars.get(&quot;spl_locatorname_random_string_length&quot;) as int // the size of the random string
+def pool = (&apos;a&apos;..&apos;z&apos;) + (&apos;A&apos;..&apos;Z&apos;) + (&apos;0&apos;..&apos;9&apos;) //.flatten() // generating pool
+Random random = new Random(System.currentTimeMillis())
+length -= 1
+// the loop should be from 0 to length – 1, then the char length would be length
+def randomChars = (0..length).collect { pool[random.nextInt(pool.size())] }
+String random_name = randomChars.join()
+
+request_path += random_name
+
+request_path += &quot;?api-version=&quot;
+request_path += vars.get(&quot;api-version&quot;)
+
+vars.put(&quot;createStreamingLocatorRequestPath&quot;, request_path)</stringProp>
+              </JSR223PreProcessor>
+              <hashTree/>
+            </hashTree>
+          </hashTree>
+          <DebugSampler guiclass="TestBeanGUI" testclass="DebugSampler" testname="Debug  Create a Streaming Locator (clear)" enabled="true">
+            <boolProp name="displayJMeterProperties">false</boolProp>
+            <boolProp name="displayJMeterVariables">true</boolProp>
+            <boolProp name="displaySystemProperties">false</boolProp>
+          </DebugSampler>
+          <hashTree/>
+          <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="Results of Create a Streaming Locator (clear)" enabled="true">
+            <boolProp name="ResultCollector.error_logging">false</boolProp>
+            <objProp>
+              <name>saveConfig</name>
+              <value class="SampleSaveConfiguration">
+                <time>true</time>
+                <latency>true</latency>
+                <timestamp>true</timestamp>
+                <success>true</success>
+                <label>true</label>
+                <code>true</code>
+                <message>true</message>
+                <threadName>true</threadName>
+                <dataType>true</dataType>
+                <encoding>false</encoding>
+                <assertions>true</assertions>
+                <subresults>true</subresults>
+                <responseData>false</responseData>
+                <samplerData>false</samplerData>
+                <xml>false</xml>
+                <fieldNames>true</fieldNames>
+                <responseHeaders>false</responseHeaders>
+                <requestHeaders>false</requestHeaders>
+                <responseDataOnError>false</responseDataOnError>
+                <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+                <assertionsResultsToSave>0</assertionsResultsToSave>
+                <bytes>true</bytes>
+                <sentBytes>true</sentBytes>
+                <url>true</url>
+                <threadCounts>true</threadCounts>
+                <idleTime>true</idleTime>
+                <connectTime>true</connectTime>
+              </value>
+            </objProp>
+            <stringProp name="filename"></stringProp>
+          </ResultCollector>
+          <hashTree/>
+        </hashTree>
+        <LoopController guiclass="LoopControlPanel" testclass="LoopController" testname="Loop over List Paths" enabled="true">
+          <stringProp name="LoopController.loops">${spl_ListPaths_loop_count}</stringProp>
+        </LoopController>
+        <hashTree>
+          <ForeachController guiclass="ForeachControlPanel" testclass="ForeachController" testname="Iterate each locator by name" enabled="true">
+            <stringProp name="ForeachController.inputVal">locator_name</stringProp>
+            <stringProp name="ForeachController.returnVal">next_locator_name</stringProp>
+            <boolProp name="ForeachController.useSeparator">true</boolProp>
+            <stringProp name="ForeachController.startIndex">1</stringProp>
+            <stringProp name="ForeachController.endIndex">${total_locators_count}</stringProp>
+          </ForeachController>
+          <hashTree>
+            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="List Paths" enabled="true">
+              <boolProp name="HTTPSampler.postBodyRaw">false</boolProp>
+              <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+                <collectionProp name="Arguments.arguments"/>
+              </elementProp>
+              <stringProp name="HTTPSampler.domain">${apiEndpoint}</stringProp>
+              <stringProp name="HTTPSampler.port">443</stringProp>
+              <stringProp name="HTTPSampler.protocol">https</stringProp>
+              <stringProp name="HTTPSampler.path">${listLocatorPathsRequestPath}</stringProp>
+              <stringProp name="HTTPSampler.method">POST</stringProp>
+              <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+              <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+              <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+              <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+              <boolProp name="HTTPSampler.BROWSER_COMPATIBLE_MULTIPART">false</boolProp>
+              <boolProp name="HTTPSampler.image_parser">false</boolProp>
+              <boolProp name="HTTPSampler.concurrentDwn">false</boolProp>
+              <stringProp name="HTTPSampler.concurrentPool">6</stringProp>
+              <boolProp name="HTTPSampler.md5">false</boolProp>
+              <intProp name="HTTPSampler.ipSourceType">0</intProp>
+            </HTTPSamplerProxy>
+            <hashTree>
+              <JSR223PreProcessor guiclass="TestBeanGUI" testclass="JSR223PreProcessor" testname="Prepare request path -&gt; List Paths" enabled="true">
+                <stringProp name="scriptLanguage">groovy</stringProp>
+                <stringProp name="parameters"></stringProp>
+                <stringProp name="filename"></stringProp>
+                <stringProp name="cacheKey">true</stringProp>
+                <stringProp name="script">// /subscriptions/:subscriptionId/resourceGroups/:resourceGroup/providers/Microsoft.Media/mediaServices/:accountName/streamingLocators/:streamingLocatorName/listPaths?api-version={{api-version}}
+
+String request_path = &quot;/subscriptions/&quot;
+request_path += vars.get(&quot;subscriptionId&quot;)
+request_path += &quot;/resourceGroups/&quot;
+request_path += vars.get(&quot;resourceGroup&quot;)
+request_path += &quot;/providers/Microsoft.Media/mediaServices/&quot;
+request_path += vars.get(&quot;accountName&quot;)
+request_path += &quot;/streamingLocators/&quot;
+request_path += vars.get(&quot;next_locator_name&quot;)
+request_path += &quot;/listPaths?api-version=&quot;
+request_path += vars.get(&quot;api-version&quot;)
+
+// log.info(&quot;Request path is: &quot; + request_path);
+vars.put(&quot;listLocatorPathsRequestPath&quot;, request_path);</stringProp>
+              </JSR223PreProcessor>
+              <hashTree/>
+            </hashTree>
+          </hashTree>
+        </hashTree>
+        <DebugSampler guiclass="TestBeanGUI" testclass="DebugSampler" testname="Debug List Paths" enabled="true">
+          <boolProp name="displayJMeterProperties">true</boolProp>
+          <boolProp name="displayJMeterVariables">true</boolProp>
+          <boolProp name="displaySystemProperties">false</boolProp>
+        </DebugSampler>
+        <hashTree/>
+        <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="Results of Streaming Policies and Locators Testing Thread" enabled="true">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>true</message>
+              <threadName>true</threadName>
+              <dataType>true</dataType>
+              <encoding>false</encoding>
+              <assertions>true</assertions>
+              <subresults>true</subresults>
+              <responseData>false</responseData>
+              <samplerData>false</samplerData>
+              <xml>false</xml>
+              <fieldNames>true</fieldNames>
+              <responseHeaders>false</responseHeaders>
+              <requestHeaders>false</requestHeaders>
+              <responseDataOnError>false</responseDataOnError>
+              <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <bytes>true</bytes>
+              <sentBytes>true</sentBytes>
+              <url>true</url>
+              <threadCounts>true</threadCounts>
+              <idleTime>true</idleTime>
+              <connectTime>true</connectTime>
+            </value>
+          </objProp>
+          <stringProp name="filename"></stringProp>
+        </ResultCollector>
+        <hashTree/>
+      </hashTree>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Transforms and Jobs — tj" enabled="true">
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
+          <stringProp name="LoopController.loops">${tj_loop_count_default}</stringProp>
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+        </elementProp>
+        <stringProp name="ThreadGroup.num_threads">${tj_number_of_threads_default}</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">${tj_rump_up_period_default}</stringProp>
+        <boolProp name="ThreadGroup.delayedStart">true</boolProp>
+        <boolProp name="ThreadGroup.scheduler">false</boolProp>
+        <stringProp name="ThreadGroup.duration"></stringProp>
+        <stringProp name="ThreadGroup.delay"></stringProp>
+        <boolProp name="ThreadGroup.same_user_on_next_iteration">false</boolProp>
+      </ThreadGroup>
+      <hashTree>
+        <JSR223Sampler guiclass="TestBeanGUI" testclass="JSR223Sampler" testname="Translate global vars to local @tj" enabled="true">
+          <stringProp name="scriptLanguage">groovy</stringProp>
+          <stringProp name="parameters"></stringProp>
+          <stringProp name="filename"></stringProp>
+          <stringProp name="cacheKey">true</stringProp>
+          <stringProp name="script">String base_id = &quot;asset_path_&quot;
+String base_name = &quot;asset_name_&quot;
+
+String max_paths_to_retrive_as_string = vars.get(&quot;asts_max_number_of_assets_retrive&quot;)
+
+int max_paths_to_retrive = 2
+
+if(max_paths_to_retrive_as_string != null){
+	max_paths_to_retrive = max_paths_to_retrive_as_string?.isInteger() ? max_paths_to_retrive_as_string as java.lang.Integer : max_paths_to_retrive
+}
+
+for(int i = 1; i &lt;= max_paths_to_retrive; i++){
+	String var_id = base_id + i
+	String var_name = base_name + i
+	vars.put(var_id, props.get(var_id))
+	vars.put(var_name, props.get(var_name))
+}
+
+log.info &quot;Inside of translating script @Transforms and Jobs&quot;</stringProp>
+        </JSR223Sampler>
+        <hashTree/>
+        <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="Base headers @Transforms and Jobs" enabled="true">
+          <collectionProp name="HeaderManager.headers">
+            <elementProp name="" elementType="Header">
+              <stringProp name="Header.name">Content-Type</stringProp>
+              <stringProp name="Header.value">application/json</stringProp>
+            </elementProp>
+            <elementProp name="" elementType="Header">
+              <stringProp name="Header.name">Connection</stringProp>
+              <stringProp name="Header.value">keep-alive</stringProp>
+            </elementProp>
+            <elementProp name="" elementType="Header">
+              <stringProp name="Header.name">Accept-Encoding</stringProp>
+              <stringProp name="Header.value">gzip, deflate, br</stringProp>
+            </elementProp>
+            <elementProp name="" elementType="Header">
+              <stringProp name="Header.name">Keep-Alive</stringProp>
+              <stringProp name="Header.value">true</stringProp>
+            </elementProp>
+            <elementProp name="" elementType="Header">
+              <stringProp name="Header.name">Accept</stringProp>
+              <stringProp name="Header.value">*/*</stringProp>
+            </elementProp>
+          </collectionProp>
+        </HeaderManager>
+        <hashTree/>
+        <JSR223Sampler guiclass="TestBeanGUI" testclass="JSR223Sampler" testname="Print variables @Transforms and Jobs" enabled="true">
+          <stringProp name="cacheKey">true</stringProp>
+          <stringProp name="filename"></stringProp>
+          <stringProp name="parameters"></stringProp>
+          <stringProp name="script">log.info &quot;Print variables.&quot;</stringProp>
+          <stringProp name="scriptLanguage">groovy</stringProp>
+        </JSR223Sampler>
+        <hashTree/>
+        <LoopController guiclass="LoopControlPanel" testclass="LoopController" testname="Loop over Create or Update Transform" enabled="true">
+          <stringProp name="LoopController.loops">${tj_CreateUpdateTransform_loop_count}</stringProp>
+        </LoopController>
+        <hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Create or Update Transform" enabled="true">
+            <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">${createUpdateTransformRequestBody}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">${apiEndpoint}</stringProp>
+            <stringProp name="HTTPSampler.port">443</stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.path">${createUpdateTransformRequestPath}</stringProp>
+            <stringProp name="HTTPSampler.method">PUT</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <boolProp name="HTTPSampler.BROWSER_COMPATIBLE_MULTIPART">false</boolProp>
+            <boolProp name="HTTPSampler.image_parser">false</boolProp>
+            <boolProp name="HTTPSampler.concurrentDwn">false</boolProp>
+            <stringProp name="HTTPSampler.concurrentPool">6</stringProp>
+            <boolProp name="HTTPSampler.md5">false</boolProp>
+            <intProp name="HTTPSampler.ipSourceType">0</intProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <JSR223PreProcessor guiclass="TestBeanGUI" testclass="JSR223PreProcessor" testname="Prepare request path -&gt; Create or Update Transform" enabled="true">
+              <stringProp name="scriptLanguage">groovy</stringProp>
+              <stringProp name="parameters"></stringProp>
+              <stringProp name="filename"></stringProp>
+              <stringProp name="cacheKey">true</stringProp>
+              <stringProp name="script">// /subscriptions/:subscriptionId/resourceGroups/:resourceGroup/providers/Microsoft.Media/mediaServices/:accountName/transforms/:transformName?api-version=2022-07-01
+
+import groovy.json.JsonSlurper
+import groovy.json.JsonBuilder
+
+String request_path = &quot;/subscriptions/&quot;
+request_path += vars.get(&quot;subscriptionId&quot;)
+request_path += &quot;/resourceGroups/&quot;
+request_path += vars.get(&quot;resourceGroup&quot;)
+request_path += &quot;/providers/Microsoft.Media/mediaServices/&quot;
+request_path += vars.get(&quot;accountName&quot;)
+request_path += &quot;/transforms/&quot;
+
+int length = vars.get(&quot;tj_locatorname_random_string_length&quot;) as int // the size of the random string
+def pool = (&apos;a&apos;..&apos;z&apos;) + (&apos;A&apos;..&apos;Z&apos;) + (&apos;0&apos;..&apos;9&apos;) //.flatten() // generating pool
+Random random = new Random(System.currentTimeMillis())
+length -= 1
+// the loop should be from 0 to length – 1, then the char length would be length
+def randomChars = (0..length).collect { pool[random.nextInt(pool.size())] }
+String random_name = randomChars.join()
+
+request_path += random_name
+
+request_path += &quot;?api-version=&quot;
+request_path += vars.get(&quot;api-version&quot;)
+
+vars.put(&quot;createUpdateTransformRequestPath&quot;, request_path)
+vars.put(&quot;createdTransformName&quot;, random_name)
+
+String base_json = &apos;&apos;&apos;{&quot;name&quot;:&quot;Default&quot;,&quot;id&quot;:&quot;/subscriptions/2b911ef1-f7dc-4135-b42f-be860bf2411d/resourceGroups/rmp-rg-dima/providers/Microsoft.Media/mediaservices/rmpmsdima/transforms/Default&quot;,&quot;type&quot;:&quot;Microsoft.Media/mediaservices/transforms&quot;,&quot;properties&quot;:{&quot;description&quot;:&quot;A simple custom encoding transform with 3 MP4 bitrates&quot;,&quot;outputs&quot;:[{&quot;onError&quot;:&quot;StopProcessingJob&quot;,&quot;relativePriority&quot;:&quot;Normal&quot;,&quot;preset&quot;:{&quot;@odata.type&quot;:&quot;#Microsoft.Media.StandardEncoderPreset&quot;,&quot;codecs&quot;:[{&quot;@odata.type&quot;:&quot;#Microsoft.Media.AacAudio&quot;,&quot;channels&quot;:2,&quot;samplingRate&quot;:48000,&quot;bitrate&quot;:128000,&quot;profile&quot;:&quot;AacLc&quot;},{&quot;@odata.type&quot;:&quot;#Microsoft.Media.H264Video&quot;,&quot;keyFrameInterval&quot;:&quot;PT2S&quot;,&quot;stretchMode&quot;:&quot;AutoSize&quot;,&quot;syncMode&quot;:&quot;Auto&quot;,&quot;sceneChangeDetection&quot;:false,&quot;rateControlMode&quot;:&quot;ABR&quot;,&quot;complexity&quot;:&quot;Balanced&quot;,&quot;layers&quot;:[{&quot;width&quot;:&quot;1280&quot;,&quot;height&quot;:&quot;720&quot;,&quot;label&quot;:&quot;HD-3600kbps&quot;,&quot;bitrate&quot;:3600000,&quot;maxBitrate&quot;:3600000,&quot;bFrames&quot;:3,&quot;slices&quot;:0,&quot;adaptiveBFrame&quot;:true,&quot;profile&quot;:&quot;Auto&quot;,&quot;level&quot;:&quot;auto&quot;,&quot;bufferWindow&quot;:&quot;PT5S&quot;,&quot;referenceFrames&quot;:3,&quot;crf&quot;:23,&quot;entropyMode&quot;:&quot;Cabac&quot;},{&quot;width&quot;:&quot;960&quot;,&quot;height&quot;:&quot;540&quot;,&quot;label&quot;:&quot;SD-1600kbps&quot;,&quot;bitrate&quot;:1600000,&quot;maxBitrate&quot;:1600000,&quot;bFrames&quot;:3,&quot;slices&quot;:0,&quot;adaptiveBFrame&quot;:true,&quot;profile&quot;:&quot;Auto&quot;,&quot;level&quot;:&quot;auto&quot;,&quot;bufferWindow&quot;:&quot;PT5S&quot;,&quot;referenceFrames&quot;:3,&quot;crf&quot;:23,&quot;entropyMode&quot;:&quot;Cabac&quot;},{&quot;width&quot;:&quot;640&quot;,&quot;height&quot;:&quot;360&quot;,&quot;label&quot;:&quot;SD-600kbps&quot;,&quot;bitrate&quot;:600000,&quot;maxBitrate&quot;:600000,&quot;bFrames&quot;:3,&quot;slices&quot;:0,&quot;adaptiveBFrame&quot;:true,&quot;profile&quot;:&quot;Auto&quot;,&quot;level&quot;:&quot;auto&quot;,&quot;bufferWindow&quot;:&quot;PT5S&quot;,&quot;referenceFrames&quot;:3,&quot;crf&quot;:23,&quot;entropyMode&quot;:&quot;Cabac&quot;}]},{&quot;@odata.type&quot;:&quot;#Microsoft.Media.PngImage&quot;,&quot;stretchMode&quot;:&quot;AutoSize&quot;,&quot;syncMode&quot;:&quot;Auto&quot;,&quot;start&quot;:&quot;0%&quot;,&quot;step&quot;:&quot;PT3S&quot;,&quot;range&quot;:&quot;100%&quot;,&quot;layers&quot;:[{&quot;width&quot;:&quot;160&quot;,&quot;height&quot;:&quot;90&quot;,&quot;label&quot;:&quot;preview&quot;}]},{&quot;@odata.type&quot;:&quot;#Microsoft.Media.JpgImage&quot;,&quot;stretchMode&quot;:&quot;AutoSize&quot;,&quot;syncMode&quot;:&quot;Auto&quot;,&quot;start&quot;:&quot;25%&quot;,&quot;step&quot;:&quot;25%&quot;,&quot;range&quot;:&quot;80%&quot;,&quot;layers&quot;:[{&quot;width&quot;:&quot;50%&quot;,&quot;height&quot;:&quot;50%&quot;}]}],&quot;formats&quot;:[{&quot;@odata.type&quot;:&quot;#Microsoft.Media.Mp4Format&quot;,&quot;filenamePattern&quot;:&quot;Video-{Basename}-{Label}-{Bitrate}{Extension}&quot;,&quot;outputFiles&quot;:[]},{&quot;@odata.type&quot;:&quot;#Microsoft.Media.PngFormat&quot;,&quot;filenamePattern&quot;:&quot;{Label}-{Basename}-{Index}{Extension}&quot;},{&quot;@odata.type&quot;:&quot;#Microsoft.Media.JpgFormat&quot;,&quot;filenamePattern&quot;:&quot;Thumbnail-{Basename}-{Index}{Extension}&quot;}]}}]}}&apos;&apos;&apos;
+
+def base_json_object = new JsonSlurper().parseText(base_json)
+
+base_json_object.put(&quot;name&quot;, random_name)
+base_json_object.put(&quot;id&quot;, request_path)
+
+def base_json_builder = new JsonBuilder(base_json_object)
+def base_json_string = base_json_builder.toString()
+
+vars.put(&quot;createUpdateTransformRequestBody&quot;, base_json_string)
+
+</stringProp>
+            </JSR223PreProcessor>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="List Jobs" enabled="true">
+            <boolProp name="HTTPSampler.postBodyRaw">false</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+              <collectionProp name="Arguments.arguments"/>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">${apiEndpoint}</stringProp>
+            <stringProp name="HTTPSampler.port">443</stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.path">${listJobsForTransformRequestPath}</stringProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <boolProp name="HTTPSampler.BROWSER_COMPATIBLE_MULTIPART">false</boolProp>
+            <boolProp name="HTTPSampler.image_parser">false</boolProp>
+            <boolProp name="HTTPSampler.concurrentDwn">false</boolProp>
+            <stringProp name="HTTPSampler.concurrentPool">6</stringProp>
+            <boolProp name="HTTPSampler.md5">false</boolProp>
+            <intProp name="HTTPSampler.ipSourceType">0</intProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <JSR223PreProcessor guiclass="TestBeanGUI" testclass="JSR223PreProcessor" testname="Prepare request path -&gt; List Jobs" enabled="true">
+              <stringProp name="scriptLanguage">groovy</stringProp>
+              <stringProp name="parameters"></stringProp>
+              <stringProp name="filename"></stringProp>
+              <stringProp name="cacheKey">true</stringProp>
+              <stringProp name="script">// /subscriptions/:subscriptionId/resourceGroups/:resourceGroup/providers/Microsoft.Media/mediaServices/:accountName/transforms/:transformName/jobs?api-version=2022-07-01
+
+String request_path = &quot;/subscriptions/&quot;
+request_path += vars.get(&quot;subscriptionId&quot;)
+request_path += &quot;/resourceGroups/&quot;
+request_path += vars.get(&quot;resourceGroup&quot;)
+request_path += &quot;/providers/Microsoft.Media/mediaServices/&quot;
+request_path += vars.get(&quot;accountName&quot;)
+request_path += &quot;/transforms/&quot;
+request_path += vars.get(&quot;createdTransformName&quot;)
+request_path += &quot;/jobs?api-version=&quot;
+request_path += vars.get(&quot;api-version&quot;)
+
+vars.put(&quot;listJobsForTransformRequestPath&quot;, request_path)</stringProp>
+            </JSR223PreProcessor>
+            <hashTree/>
+            <JSR223PostProcessor guiclass="TestBeanGUI" testclass="JSR223PostProcessor" testname="Parse list of available jobs from JSON response" enabled="true">
+              <stringProp name="scriptLanguage">groovy</stringProp>
+              <stringProp name="parameters"></stringProp>
+              <stringProp name="filename"></stringProp>
+              <stringProp name="cacheKey">true</stringProp>
+              <stringProp name="script">import groovy.json.JsonSlurper
+
+def json_object = new JsonSlurper().parseText(prev.getResponseDataAsString())
+
+def list_of_job_objects = json_object.get(&quot;value&quot;)
+
+List&lt;String&gt; job_path_list = new ArrayList&lt;&gt;()
+List&lt;String&gt; job_name_list = new ArrayList&lt;&gt;()
+List&lt;String&gt; job_id_list = new ArrayList&lt;&gt;()
+
+list_of_job_objects.eachWithIndex{next_job,index-&gt;
+	String next_job_name = next_job.get(&quot;name&quot;)
+	String next_job_id = next_job.get(&quot;properties&quot;).get(&quot;streamingLocatorId&quot;)
+	String next_job_path = next_job.get(&quot;id&quot;)
+	job_path_list.add(next_job_path)
+	job_name_list.add(next_job_name)
+	job_id_list.add(next_job_id)
+	
+	vars.put(&quot;job_path_&quot; + (index + 1), next_job_path)
+	vars.put(&quot;job_name_&quot; + (index + 1), next_job_name)
+}
+
+vars.put(&quot;total_job_count&quot;, job_path_list.size as String)</stringProp>
+            </JSR223PostProcessor>
+            <hashTree/>
+          </hashTree>
+          <ForeachController guiclass="ForeachControlPanel" testclass="ForeachController" testname="Iterate each jom from list job" enabled="true">
+            <stringProp name="ForeachController.inputVal">job_path</stringProp>
+            <stringProp name="ForeachController.returnVal">next_job_path</stringProp>
+            <boolProp name="ForeachController.useSeparator">true</boolProp>
+            <stringProp name="ForeachController.startIndex">1</stringProp>
+            <stringProp name="ForeachController.endIndex">${total_job_count}</stringProp>
+          </ForeachController>
+          <hashTree>
+            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Get Job" enabled="true">
+              <boolProp name="HTTPSampler.postBodyRaw">false</boolProp>
+              <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+                <collectionProp name="Arguments.arguments"/>
+              </elementProp>
+              <stringProp name="HTTPSampler.domain">${apiEndpoint}</stringProp>
+              <stringProp name="HTTPSampler.port">443</stringProp>
+              <stringProp name="HTTPSampler.protocol">https</stringProp>
+              <stringProp name="HTTPSampler.path">${getJobRequestPath}</stringProp>
+              <stringProp name="HTTPSampler.method">GET</stringProp>
+              <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+              <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+              <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+              <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+              <boolProp name="HTTPSampler.BROWSER_COMPATIBLE_MULTIPART">false</boolProp>
+              <boolProp name="HTTPSampler.image_parser">false</boolProp>
+              <boolProp name="HTTPSampler.concurrentDwn">false</boolProp>
+              <stringProp name="HTTPSampler.concurrentPool">6</stringProp>
+              <boolProp name="HTTPSampler.md5">false</boolProp>
+              <intProp name="HTTPSampler.ipSourceType">0</intProp>
+            </HTTPSamplerProxy>
+            <hashTree>
+              <JSR223PreProcessor guiclass="TestBeanGUI" testclass="JSR223PreProcessor" testname="Prepare request path -&gt; Get Job" enabled="true">
+                <stringProp name="scriptLanguage">groovy</stringProp>
+                <stringProp name="parameters"></stringProp>
+                <stringProp name="filename"></stringProp>
+                <stringProp name="cacheKey">true</stringProp>
+                <stringProp name="script">// /subscriptions/:subscriptionId/resourceGroups/:resourceGroup/providers/Microsoft.Media/mediaServices/:accountName/transforms/:transformName/jobs/:jobName?api-version=2022-07-01
+
+// /subscriptions/f0d5c515-ed20-49fd-a9c5-d3b336f7df5a/resourceGroups/rg-rms-perftest-westeurope/providers/Microsoft.Media/mediaServices/default/transforms/Default/jobs/job-81a77546-50a4
+// /subscriptions/f0d5c515-ed20-49fd-a9c5-d3b336f7df5a/resourceGroups/rg-rms-perftest-westeurope/providers/Microsoft.Media/mediaServices/default/transforms/Default/jobs/job-b59ba575-757f
+
+String next_job_path = vars.get(&quot;next_job_path&quot;)
+next_job_path += &quot;?api-version=&quot;
+next_job_path += vars.get(&quot;api-version&quot;)
+
+log.info &quot;getJobRequestPath: &quot; + next_job_path
+
+vars.put(&quot;getJobRequestPath&quot;, next_job_path)
+
+// /subscriptions/:subscriptionId/resourceGroups/:resourceGroup/providers/Microsoft.Media/mediaServices/:accountName/transforms/:transformName/jobs/:jobName?api-version={{api-version}}</stringProp>
+              </JSR223PreProcessor>
+              <hashTree/>
+            </hashTree>
+            <IfController guiclass="IfControllerPanel" testclass="IfController" testname="Run Updating a job" enabled="true">
+              <boolProp name="IfController.evaluateAll">false</boolProp>
+              <boolProp name="IfController.useExpression">true</boolProp>
+              <stringProp name="IfController.condition">${__javaScript(${tj_run_update_job_procedure})}</stringProp>
+            </IfController>
+            <hashTree>
+              <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Update Job" enabled="true">
+                <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+                <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+                  <collectionProp name="Arguments.arguments">
+                    <elementProp name="" elementType="HTTPArgument">
+                      <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                      <stringProp name="Argument.value">{&#xd;
+    &quot;input&quot;: {&#xd;
+      &quot;@odata.type&quot;: &quot;#Microsoft.Media.JobInputAsset&quot;,&#xd;
+      &quot;assetName&quot;: &quot;job1-InputAsset&quot;&#xd;
+    },&#xd;
+    &quot;outputs&quot;: [&#xd;
+      {&#xd;
+        &quot;@odata.type&quot;: &quot;#Microsoft.Media.JobOutputAsset&quot;,&#xd;
+        &quot;assetName&quot;: &quot;job1-OutputAsset&quot;&#xd;
+      }&#xd;
+    ],&#xd;
+    &quot;priority&quot; : &quot;Normal&quot;,&#xd;
+    &quot;correlationData&quot;: {&#xd;
+      &quot;myKey1&quot; :&quot;my custom correlation metadata for this job&quot;&#xd;
+    }&#xd;
+}</stringProp>
+                      <stringProp name="Argument.metadata">=</stringProp>
+                    </elementProp>
+                  </collectionProp>
+                </elementProp>
+                <stringProp name="HTTPSampler.domain">${apiEndpoint}</stringProp>
+                <stringProp name="HTTPSampler.port">443</stringProp>
+                <stringProp name="HTTPSampler.protocol">https</stringProp>
+                <stringProp name="HTTPSampler.path">${getJobRequestPath}</stringProp>
+                <stringProp name="HTTPSampler.method">PATCH</stringProp>
+                <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+                <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+                <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+                <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+                <boolProp name="HTTPSampler.BROWSER_COMPATIBLE_MULTIPART">false</boolProp>
+                <boolProp name="HTTPSampler.image_parser">false</boolProp>
+                <boolProp name="HTTPSampler.concurrentDwn">false</boolProp>
+                <stringProp name="HTTPSampler.concurrentPool">6</stringProp>
+                <boolProp name="HTTPSampler.md5">false</boolProp>
+                <intProp name="HTTPSampler.ipSourceType">0</intProp>
+              </HTTPSamplerProxy>
+              <hashTree>
+                <JSR223PreProcessor guiclass="TestBeanGUI" testclass="JSR223PreProcessor" testname="Prepare request path -&gt; Update Job" enabled="true">
+                  <stringProp name="scriptLanguage">groovy</stringProp>
+                  <stringProp name="parameters"></stringProp>
+                  <stringProp name="filename"></stringProp>
+                  <stringProp name="cacheKey">true</stringProp>
+                  <stringProp name="script"></stringProp>
+                </JSR223PreProcessor>
+                <hashTree/>
+              </hashTree>
+            </hashTree>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Delete Transform" enabled="true">
+            <boolProp name="HTTPSampler.postBodyRaw">false</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+              <collectionProp name="Arguments.arguments"/>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">${apiEndpoint}</stringProp>
+            <stringProp name="HTTPSampler.port">443</stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.path">${createUpdateTransformRequestPath}</stringProp>
+            <stringProp name="HTTPSampler.method">DELETE</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <boolProp name="HTTPSampler.BROWSER_COMPATIBLE_MULTIPART">false</boolProp>
+            <boolProp name="HTTPSampler.image_parser">false</boolProp>
+            <boolProp name="HTTPSampler.concurrentDwn">false</boolProp>
+            <stringProp name="HTTPSampler.concurrentPool">6</stringProp>
+            <boolProp name="HTTPSampler.md5">false</boolProp>
+            <intProp name="HTTPSampler.ipSourceType">0</intProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <JSR223PreProcessor guiclass="TestBeanGUI" testclass="JSR223PreProcessor" testname="Prepare request path -&gt; Delete Transform" enabled="false">
+              <stringProp name="scriptLanguage">groovy</stringProp>
+              <stringProp name="parameters"></stringProp>
+              <stringProp name="filename"></stringProp>
+              <stringProp name="cacheKey">true</stringProp>
+              <stringProp name="script"></stringProp>
+            </JSR223PreProcessor>
+            <hashTree/>
+          </hashTree>
+          <DebugSampler guiclass="TestBeanGUI" testclass="DebugSampler" testname="Debug Create or Update Transform" enabled="true">
+            <boolProp name="displayJMeterProperties">false</boolProp>
+            <boolProp name="displayJMeterVariables">true</boolProp>
+            <boolProp name="displaySystemProperties">false</boolProp>
+          </DebugSampler>
+          <hashTree/>
+          <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="Results of Create or Update Transform" enabled="true">
+            <boolProp name="ResultCollector.error_logging">false</boolProp>
+            <objProp>
+              <name>saveConfig</name>
+              <value class="SampleSaveConfiguration">
+                <time>true</time>
+                <latency>true</latency>
+                <timestamp>true</timestamp>
+                <success>true</success>
+                <label>true</label>
+                <code>true</code>
+                <message>true</message>
+                <threadName>true</threadName>
+                <dataType>true</dataType>
+                <encoding>false</encoding>
+                <assertions>true</assertions>
+                <subresults>true</subresults>
+                <responseData>false</responseData>
+                <samplerData>false</samplerData>
+                <xml>false</xml>
+                <fieldNames>true</fieldNames>
+                <responseHeaders>false</responseHeaders>
+                <requestHeaders>false</requestHeaders>
+                <responseDataOnError>false</responseDataOnError>
+                <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+                <assertionsResultsToSave>0</assertionsResultsToSave>
+                <bytes>true</bytes>
+                <sentBytes>true</sentBytes>
+                <url>true</url>
+                <threadCounts>true</threadCounts>
+                <sampleCount>true</sampleCount>
+                <idleTime>true</idleTime>
+                <connectTime>true</connectTime>
+              </value>
+            </objProp>
+            <stringProp name="filename"></stringProp>
+          </ResultCollector>
+          <hashTree/>
+        </hashTree>
+        <DebugSampler guiclass="TestBeanGUI" testclass="DebugSampler" testname="Debug Transforms and Jobs" enabled="true">
+          <boolProp name="displayJMeterProperties">false</boolProp>
+          <boolProp name="displayJMeterVariables">true</boolProp>
+          <boolProp name="displaySystemProperties">false</boolProp>
+        </DebugSampler>
+        <hashTree/>
+        <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="Results of Transforms and Jobs" enabled="true">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>true</message>
+              <threadName>true</threadName>
+              <dataType>true</dataType>
+              <encoding>false</encoding>
+              <assertions>true</assertions>
+              <subresults>true</subresults>
+              <responseData>false</responseData>
+              <samplerData>false</samplerData>
+              <xml>false</xml>
+              <fieldNames>true</fieldNames>
+              <responseHeaders>false</responseHeaders>
+              <requestHeaders>false</requestHeaders>
+              <responseDataOnError>false</responseDataOnError>
+              <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <bytes>true</bytes>
+              <sentBytes>true</sentBytes>
+              <url>true</url>
+              <threadCounts>true</threadCounts>
+              <idleTime>true</idleTime>
+              <connectTime>true</connectTime>
+            </value>
+          </objProp>
+          <stringProp name="filename"></stringProp>
+        </ResultCollector>
+        <hashTree/>
+      </hashTree>
+      <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="Results of Load Testing of RMS Public API" enabled="true">
+        <boolProp name="ResultCollector.error_logging">false</boolProp>
+        <objProp>
+          <name>saveConfig</name>
+          <value class="SampleSaveConfiguration">
+            <time>true</time>
+            <latency>true</latency>
+            <timestamp>true</timestamp>
+            <success>true</success>
+            <label>true</label>
+            <code>true</code>
+            <message>true</message>
+            <threadName>true</threadName>
+            <dataType>true</dataType>
+            <encoding>false</encoding>
+            <assertions>true</assertions>
+            <subresults>true</subresults>
+            <responseData>false</responseData>
+            <samplerData>false</samplerData>
+            <xml>false</xml>
+            <fieldNames>true</fieldNames>
+            <responseHeaders>false</responseHeaders>
+            <requestHeaders>false</requestHeaders>
+            <responseDataOnError>false</responseDataOnError>
+            <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+            <assertionsResultsToSave>0</assertionsResultsToSave>
+            <bytes>true</bytes>
+            <sentBytes>true</sentBytes>
+            <url>true</url>
+            <threadCounts>true</threadCounts>
+            <idleTime>true</idleTime>
+            <connectTime>true</connectTime>
+          </value>
+        </objProp>
+        <stringProp name="filename"></stringProp>
+      </ResultCollector>
+      <hashTree/>
+      <PostThreadGroup guiclass="PostThreadGroupGui" testclass="PostThreadGroup" testname="tearDown Thread Group" enabled="false">
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
+          <stringProp name="LoopController.loops">1</stringProp>
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+        </elementProp>
+        <stringProp name="ThreadGroup.num_threads">1</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">1</stringProp>
+        <boolProp name="ThreadGroup.scheduler">false</boolProp>
+        <stringProp name="ThreadGroup.duration"></stringProp>
+        <stringProp name="ThreadGroup.delay"></stringProp>
+        <boolProp name="ThreadGroup.same_user_on_next_iteration">false</boolProp>
+      </PostThreadGroup>
+      <hashTree/>
+      <ResultCollector guiclass="SummaryReport" testclass="ResultCollector" testname="Summary Report" enabled="true">
+        <boolProp name="ResultCollector.error_logging">false</boolProp>
+        <objProp>
+          <name>saveConfig</name>
+          <value class="SampleSaveConfiguration">
+            <time>true</time>
+            <latency>true</latency>
+            <timestamp>true</timestamp>
+            <success>true</success>
+            <label>true</label>
+            <code>true</code>
+            <message>true</message>
+            <threadName>true</threadName>
+            <dataType>true</dataType>
+            <encoding>false</encoding>
+            <assertions>true</assertions>
+            <subresults>true</subresults>
+            <responseData>false</responseData>
+            <samplerData>false</samplerData>
+            <xml>false</xml>
+            <fieldNames>true</fieldNames>
+            <responseHeaders>false</responseHeaders>
+            <requestHeaders>false</requestHeaders>
+            <responseDataOnError>false</responseDataOnError>
+            <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+            <assertionsResultsToSave>0</assertionsResultsToSave>
+            <bytes>true</bytes>
+            <sentBytes>true</sentBytes>
+            <url>true</url>
+            <threadCounts>true</threadCounts>
+            <sampleCount>true</sampleCount>
+            <idleTime>true</idleTime>
+            <connectTime>true</connectTime>
+          </value>
+        </objProp>
+        <stringProp name="filename"></stringProp>
+        <boolProp name="useGroupName">true</boolProp>
+      </ResultCollector>
+      <hashTree/>
+      <ResultCollector guiclass="StatVisualizer" testclass="ResultCollector" testname="Aggregate Report" enabled="true">
+        <boolProp name="ResultCollector.error_logging">false</boolProp>
+        <objProp>
+          <name>saveConfig</name>
+          <value class="SampleSaveConfiguration">
+            <time>true</time>
+            <latency>true</latency>
+            <timestamp>true</timestamp>
+            <success>true</success>
+            <label>true</label>
+            <code>true</code>
+            <message>true</message>
+            <threadName>true</threadName>
+            <dataType>true</dataType>
+            <encoding>false</encoding>
+            <assertions>true</assertions>
+            <subresults>true</subresults>
+            <responseData>false</responseData>
+            <samplerData>false</samplerData>
+            <xml>false</xml>
+            <fieldNames>true</fieldNames>
+            <responseHeaders>false</responseHeaders>
+            <requestHeaders>false</requestHeaders>
+            <responseDataOnError>false</responseDataOnError>
+            <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+            <assertionsResultsToSave>0</assertionsResultsToSave>
+            <bytes>true</bytes>
+            <sentBytes>true</sentBytes>
+            <url>true</url>
+            <threadCounts>true</threadCounts>
+            <sampleCount>true</sampleCount>
+            <idleTime>true</idleTime>
+            <connectTime>true</connectTime>
+          </value>
+        </objProp>
+        <stringProp name="filename"></stringProp>
+        <boolProp name="useGroupName">true</boolProp>
+      </ResultCollector>
+      <hashTree/>
+      <Summariser guiclass="SummariserGui" testclass="Summariser" testname="Generate Summary Results" enabled="true"/>
+      <hashTree/>
+      <ResultCollector guiclass="TableVisualizer" testclass="ResultCollector" testname="View Results in Table" enabled="true">
+        <boolProp name="ResultCollector.error_logging">false</boolProp>
+        <objProp>
+          <name>saveConfig</name>
+          <value class="SampleSaveConfiguration">
+            <time>true</time>
+            <latency>true</latency>
+            <timestamp>true</timestamp>
+            <success>true</success>
+            <label>true</label>
+            <code>true</code>
+            <message>true</message>
+            <threadName>true</threadName>
+            <dataType>true</dataType>
+            <encoding>false</encoding>
+            <assertions>true</assertions>
+            <subresults>true</subresults>
+            <responseData>false</responseData>
+            <samplerData>false</samplerData>
+            <xml>false</xml>
+            <fieldNames>true</fieldNames>
+            <responseHeaders>false</responseHeaders>
+            <requestHeaders>false</requestHeaders>
+            <responseDataOnError>false</responseDataOnError>
+            <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+            <assertionsResultsToSave>0</assertionsResultsToSave>
+            <bytes>true</bytes>
+            <sentBytes>true</sentBytes>
+            <url>true</url>
+            <threadCounts>true</threadCounts>
+            <sampleCount>true</sampleCount>
+            <idleTime>true</idleTime>
+            <connectTime>true</connectTime>
+          </value>
+        </objProp>
+        <stringProp name="filename"></stringProp>
+      </ResultCollector>
+      <hashTree/>
+      <BeanShellListener guiclass="TestBeanGUI" testclass="BeanShellListener" testname="BeanShell Listener" enabled="false">
+        <stringProp name="filename"></stringProp>
+        <stringProp name="parameters"></stringProp>
+        <boolProp name="resetInterpreter">false</boolProp>
+        <stringProp name="script"></stringProp>
+      </BeanShellListener>
+      <hashTree/>
+      <ResultCollector guiclass="StatGraphVisualizer" testclass="ResultCollector" testname="Aggregate Graph" enabled="true">
+        <boolProp name="ResultCollector.error_logging">false</boolProp>
+        <objProp>
+          <name>saveConfig</name>
+          <value class="SampleSaveConfiguration">
+            <time>true</time>
+            <latency>true</latency>
+            <timestamp>true</timestamp>
+            <success>true</success>
+            <label>true</label>
+            <code>true</code>
+            <message>true</message>
+            <threadName>true</threadName>
+            <dataType>true</dataType>
+            <encoding>false</encoding>
+            <assertions>true</assertions>
+            <subresults>true</subresults>
+            <responseData>false</responseData>
+            <samplerData>false</samplerData>
+            <xml>false</xml>
+            <fieldNames>true</fieldNames>
+            <responseHeaders>false</responseHeaders>
+            <requestHeaders>false</requestHeaders>
+            <responseDataOnError>false</responseDataOnError>
+            <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+            <assertionsResultsToSave>0</assertionsResultsToSave>
+            <bytes>true</bytes>
+            <sentBytes>true</sentBytes>
+            <url>true</url>
+            <threadCounts>true</threadCounts>
+            <idleTime>true</idleTime>
+            <connectTime>true</connectTime>
+          </value>
+        </objProp>
+        <stringProp name="filename"></stringProp>
+      </ResultCollector>
+      <hashTree/>
+      <ResultCollector guiclass="GraphVisualizer" testclass="ResultCollector" testname="Graph Results" enabled="true">
+        <boolProp name="ResultCollector.error_logging">false</boolProp>
+        <objProp>
+          <name>saveConfig</name>
+          <value class="SampleSaveConfiguration">
+            <time>true</time>
+            <latency>true</latency>
+            <timestamp>true</timestamp>
+            <success>true</success>
+            <label>true</label>
+            <code>true</code>
+            <message>true</message>
+            <threadName>true</threadName>
+            <dataType>true</dataType>
+            <encoding>false</encoding>
+            <assertions>true</assertions>
+            <subresults>true</subresults>
+            <responseData>false</responseData>
+            <samplerData>false</samplerData>
+            <xml>false</xml>
+            <fieldNames>true</fieldNames>
+            <responseHeaders>false</responseHeaders>
+            <requestHeaders>false</requestHeaders>
+            <responseDataOnError>false</responseDataOnError>
+            <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+            <assertionsResultsToSave>0</assertionsResultsToSave>
+            <bytes>true</bytes>
+            <sentBytes>true</sentBytes>
+            <url>true</url>
+            <threadCounts>true</threadCounts>
+            <idleTime>true</idleTime>
+            <connectTime>true</connectTime>
+          </value>
+        </objProp>
+        <stringProp name="filename"></stringProp>
+      </ResultCollector>
+      <hashTree/>
+      <ResultCollector guiclass="RespTimeGraphVisualizer" testclass="ResultCollector" testname="Response Time Graph" enabled="true">
+        <boolProp name="ResultCollector.error_logging">false</boolProp>
+        <objProp>
+          <name>saveConfig</name>
+          <value class="SampleSaveConfiguration">
+            <time>true</time>
+            <latency>true</latency>
+            <timestamp>true</timestamp>
+            <success>true</success>
+            <label>true</label>
+            <code>true</code>
+            <message>true</message>
+            <threadName>true</threadName>
+            <dataType>true</dataType>
+            <encoding>false</encoding>
+            <assertions>true</assertions>
+            <subresults>true</subresults>
+            <responseData>false</responseData>
+            <samplerData>false</samplerData>
+            <xml>false</xml>
+            <fieldNames>true</fieldNames>
+            <responseHeaders>false</responseHeaders>
+            <requestHeaders>false</requestHeaders>
+            <responseDataOnError>false</responseDataOnError>
+            <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+            <assertionsResultsToSave>0</assertionsResultsToSave>
+            <bytes>true</bytes>
+            <sentBytes>true</sentBytes>
+            <url>true</url>
+            <threadCounts>true</threadCounts>
+            <idleTime>true</idleTime>
+            <connectTime>true</connectTime>
+          </value>
+        </objProp>
+        <stringProp name="filename"></stringProp>
+        <stringProp name="RespTimeGraph.graphtitle">Response Time Graph</stringProp>
+        <intProp name="RespTimeGraph.legendsize">5</intProp>
+      </ResultCollector>
+      <hashTree/>
+    </hashTree>
+  </hashTree>
+</jmeterTestPlan>
