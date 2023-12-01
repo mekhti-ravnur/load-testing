@@ -6,13 +6,12 @@
 -----
 Table of contents
 - [Apache JMeter configuration for load testing of RMS Public API infrastructure](#apache-jmeter-configuration-for-load-testing-of-rms-public-api-infrastructure)
-- [](#)
 - [Default environment configuration](#default-environment-configuration)
 - [Azure LT environment configurations](#azure-lt-environment-configurations)
 - [Check Azure LT environment for configurations](#check-azure-lt-environment-for-configurations)
 - [Default Threads Running Properties](#default-threads-running-properties)
 - [Azure LT environment Threads Testing Properties](#azure-lt-environment-threads-testing-properties)
-		- [Table of variables that can be defined via **Azure Load Testing** environment](#table-of-variables-that-can-be-defined-via-azure-load-testing-environment)
+	- [Table of variables that can be defined via **Azure Load Testing** environment](#table-of-variables-that-can-be-defined-via-azure-load-testing-environment)
 - [Check Azure LT environment for Thread Properties](#check-azure-lt-environment-for-thread-properties)
 - [Get AAD Authorization Token — gAuthToken](#get-aad-authorization-token--gauthtoken)
 - [Assets testing — asts Threading Group](#assets-testing--asts-threading-group)

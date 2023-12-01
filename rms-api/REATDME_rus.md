@@ -5,26 +5,26 @@
 > На данный момент не удалось добиться работы одного скрипта как в локальной среде, так и в среде **Azure Load Testing**. Проблема наблюдается с переменными, значения которых должны управлять параметрами запусков потоков (_Thread_). 
 
 -----------
+
 ### Table of contents
+
 - [Apache JMeter configuration for load testing of RMS Public API infrastructure](#apache-jmeter-configuration-for-load-testing-of-rms-public-api-infrastructure)
-		- [Table of contents](#table-of-contents)
-	- [](#)
-	- [Default environment configuration](#default-environment-configuration)
-	- [Azure LT environment configurations](#azure-lt-environment-configurations)
-	- [Check Azure LT environment for configurations](#check-azure-lt-environment-for-configurations)
-	- [Default Threads Running Properties](#default-threads-running-properties)
-	- [Azure LT environment Threads Testing Properties](#azure-lt-environment-threads-testing-properties)
-			- [Таблица переменных определяемых через окружение **Azure Load Testing**](#таблица-переменных-определяемых-через-окружение-azure-load-testing)
-	- [Check Azure LT environment for Thread Properties](#check-azure-lt-environment-for-thread-properties)
-	- [Get AAD Authorization Token — gAuthToken](#get-aad-authorization-token--gauthtoken)
-	- [Assets testing — asts Threading Group](#assets-testing--asts-threading-group)
-		- [Prepare request path скрипты](#prepare-request-path-скрипты)
-		- [Парсеры возвращаемых запросами ответов](#парсеры-возвращаемых-запросами-ответов)
-		- [Итераторы запросов](#итераторы-запросов)
-	- [Streaming Policies and Locators Testing — spl Threading Group](#streaming-policies-and-locators-testing--spl-threading-group)
-		- [Скрипт трансляции глобальных переменных в локальную зону видимости](#скрипт-трансляции-глобальных-переменных-в-локальную-зону-видимости)
-	- [Transforms and Jobs Threading Group](#transforms-and-jobs-threading-group)
-	- [Информация по метрикам](#информация-по-метрикам)
+  - [Default environment configuration](#default-environment-configuration)
+  - [Azure LT environment configurations](#azure-lt-environment-configurations)
+  - [Check Azure LT environment for configurations](#check-azure-lt-environment-for-configurations)
+  - [Default Threads Running Properties](#default-threads-running-properties)
+  - [Azure LT environment Threads Testing Properties](#azure-lt-environment-threads-testing-properties)
+    - [Таблица переменных определяемых через окружение **Azure Load Testing**](#таблица-переменных-определяемых-через-окружение-azure-load-testing)
+  - [Check Azure LT environment for Thread Properties](#check-azure-lt-environment-for-thread-properties)
+  - [Get AAD Authorization Token — gAuthToken](#get-aad-authorization-token--gauthtoken)
+  - [Assets testing — asts Threading Group](#assets-testing--asts-threading-group)
+    - [Prepare request path скрипты](#prepare-request-path-скрипты)
+    - [Парсеры возвращаемых запросами ответов](#парсеры-возвращаемых-запросами-ответов)
+    - [Итераторы запросов](#итераторы-запросов)
+  - [Streaming Policies and Locators Testing — spl Threading Group](#streaming-policies-and-locators-testing--spl-threading-group)
+    - [Скрипт трансляции глобальных переменных в локальную зону видимости](#скрипт-трансляции-глобальных-переменных-в-локальную-зону-видимости)
+  - [Transforms and Jobs Threading Group](#transforms-and-jobs-threading-group)
+  - [Информация по метрикам](#информация-по-метрикам)
 
 -----------
 
@@ -53,7 +53,6 @@
 
 ![JSR223 PreProcessor 1](./img/image-3.png)
 
-
 В модуле **Check Azure LT environment for configurations** реализован скрипт для проверки запуска конфигурации в среде **Azure Load Testing**. 
 
 ```groovy
@@ -62,11 +61,11 @@
 List<String> list_of_parameters = ["subscriptionId", "accountName", "storageAccountName", "resourceGroup", "api-version", "assetName", "transformName", "jobName", "liveEventName", "liveOutputName", "streamingEndpointName", "streamingPolicyName", "streamingLocatorName", "location", "AccessToken", "apiEndpoint", "rmsApiKey"]
 
 for(next_parameter in list_of_parameters){
-	default_parameter_name = next_parameter + "_default"
-	def var_to_check = vars.get(next_parameter)
-	if(var_to_check == null || var_to_check == 0 || var_to_check.length() == 0){
-		vars.put(next_parameter, vars.get(default_parameter_name))
-	}
+    default_parameter_name = next_parameter + "_default"
+    def var_to_check = vars.get(next_parameter)
+    if(var_to_check == null || var_to_check == 0 || var_to_check.length() == 0){
+        vars.put(next_parameter, vars.get(default_parameter_name))
+    }
 }
 ```
 
@@ -91,32 +90,33 @@ for(next_parameter in list_of_parameters){
 [Top](#table-of-contents)
 
 #### Таблица переменных определяемых через окружение **Azure Load Testing**
-| Имя переменной | Поток | Описание | Значение по умолчанию |
-|:-:|:-:|:--|:-:|
-| astsNumberOfThreads |_Assets testing thread_|Number of Users.|1|
-| astsRumpUpPeriod |_Assets testing thread_|Rump Up Period.|1|
-| astsLoopCount |_Assets testing thread_|Loop Count.|1|
-| astsListAssetsLC |_Assets testing thread_|Loop Count for List Asset request for each thread user.|1|
-| astsMaxNumberOfAssetsRetrive |_Assets testing thread_|Max number of assets that will be selected to Get Asset stage.|10|
-| astsRandomStringLength |_Assets testing thread_|The length of random string that should be generated for using as new Asset name.|10|
-| astsGetAnAssetLC |_Assets testing thread_|Loop Count for Get An Asset request for each thread user.|1|
-| astsCreateOrUpdateAssetLC |_Assets testing thread_|Loop Count for Create or Update Asset request for each thread user.|1|
-| astsListAnAssetURLsLC |_Assets testing thread_|Loop Count for List an Asset URLs request for each thread user.|1|
-| astsListStreamingLocatorsLC |_Assets testing thread_|Loop Count for List Streaming Locators request for each thread user.|1|
-| splNumberOfThreads |_Streaming Policies and Locators testing thread_|Number of Users.|1|
-| splRumpUpPeriod |_Streaming Policies and Locators testing thread_|Rump Up Period. |1|
-| splLoopCount |_Streaming Policies and Locators testing thread_|Loop Count.|1|
-| splListStreamingPoliciesLC |_Streaming Policies and Locators testing thread_|Loop Count for List Streaming Policies request for each thread user.|1|
-| splGetStreamingLocatorLC |_Streaming Policies and Locators testing thread_|Loop Count for Get Streaming Locators request for each thread user.|1|
-| splListStreamingLocatorsLC |_Streaming Policies and Locators testing thread_|Loop Count for List Streaming Locators request for each thread user.|1|
-| splCreateStreamingLocatorLC |_Streaming Policies and Locators testing thread_|Loop Count for Create Streaming Locators request for each thread user.|1|
-| splRandomStringLength |_Streaming Policies and Locators testing thread_|The length of random string that should be generated for using as new Locator name.|10|
-| splListPathLC |_Streaming Policies and Locators testing thread_|Loop Count for List Path request for each thread user.|1|
-| tjNumberOfThreads |_Transforms and Jobs testing thread_|Number of Users.|1|
-| tjRumpUpPeriod |_Transforms and Jobs testing thread_|Rump Up Period.|1|
-| tjLoopCount |_Transforms and Jobs testing thread_|Loop Count.|1|
-| tjCreateUpdateTransformLC |_Transforms and Jobs testing thread_|Loop Count for Create Update Transform request for each thread user.|1|
-| tjLocatornameRandomStringLength |_Transforms and Jobs testing thread_|The length of random string that should be generated for using as new Locator name.|10|
+
+| Имя переменной                  | Поток                                            | Описание                                                                            | Значение по умолчанию |
+|:-------------------------------:|:------------------------------------------------:|:----------------------------------------------------------------------------------- |:---------------------:|
+| astsNumberOfThreads             | _Assets testing thread_                          | Number of Users.                                                                    | 1                     |
+| astsRumpUpPeriod                | _Assets testing thread_                          | Rump Up Period.                                                                     | 1                     |
+| astsLoopCount                   | _Assets testing thread_                          | Loop Count.                                                                         | 1                     |
+| astsListAssetsLC                | _Assets testing thread_                          | Loop Count for List Asset request for each thread user.                             | 1                     |
+| astsMaxNumberOfAssetsRetrive    | _Assets testing thread_                          | Max number of assets that will be selected to Get Asset stage.                      | 10                    |
+| astsRandomStringLength          | _Assets testing thread_                          | The length of random string that should be generated for using as new Asset name.   | 10                    |
+| astsGetAnAssetLC                | _Assets testing thread_                          | Loop Count for Get An Asset request for each thread user.                           | 1                     |
+| astsCreateOrUpdateAssetLC       | _Assets testing thread_                          | Loop Count for Create or Update Asset request for each thread user.                 | 1                     |
+| astsListAnAssetURLsLC           | _Assets testing thread_                          | Loop Count for List an Asset URLs request for each thread user.                     | 1                     |
+| astsListStreamingLocatorsLC     | _Assets testing thread_                          | Loop Count for List Streaming Locators request for each thread user.                | 1                     |
+| splNumberOfThreads              | _Streaming Policies and Locators testing thread_ | Number of Users.                                                                    | 1                     |
+| splRumpUpPeriod                 | _Streaming Policies and Locators testing thread_ | Rump Up Period.                                                                     | 1                     |
+| splLoopCount                    | _Streaming Policies and Locators testing thread_ | Loop Count.                                                                         | 1                     |
+| splListStreamingPoliciesLC      | _Streaming Policies and Locators testing thread_ | Loop Count for List Streaming Policies request for each thread user.                | 1                     |
+| splGetStreamingLocatorLC        | _Streaming Policies and Locators testing thread_ | Loop Count for Get Streaming Locators request for each thread user.                 | 1                     |
+| splListStreamingLocatorsLC      | _Streaming Policies and Locators testing thread_ | Loop Count for List Streaming Locators request for each thread user.                | 1                     |
+| splCreateStreamingLocatorLC     | _Streaming Policies and Locators testing thread_ | Loop Count for Create Streaming Locators request for each thread user.              | 1                     |
+| splRandomStringLength           | _Streaming Policies and Locators testing thread_ | The length of random string that should be generated for using as new Locator name. | 10                    |
+| splListPathLC                   | _Streaming Policies and Locators testing thread_ | Loop Count for List Path request for each thread user.                              | 1                     |
+| tjNumberOfThreads               | _Transforms and Jobs testing thread_             | Number of Users.                                                                    | 1                     |
+| tjRumpUpPeriod                  | _Transforms and Jobs testing thread_             | Rump Up Period.                                                                     | 1                     |
+| tjLoopCount                     | _Transforms and Jobs testing thread_             | Loop Count.                                                                         | 1                     |
+| tjCreateUpdateTransformLC       | _Transforms and Jobs testing thread_             | Loop Count for Create Update Transform request for each thread user.                | 1                     |
+| tjLocatornameRandomStringLength | _Transforms and Jobs testing thread_             | The length of random string that should be generated for using as new Locator name. | 10                    |
 
 [Top](#table-of-contents)
 
@@ -132,11 +132,11 @@ for(next_parameter in list_of_parameters){
 List<String> list_of_parameters = ["asts_number_of_threads", "asts_rump_up_period", "asts_loop_count", "asts_max_number_of_assets_retrive", "asts_assetname_random_string_length", "asts_ListAssets_loop_count", "asts_GetAnAsset_loop_count", "asts_CreateOrUpdateAsset_loop_count", "asts_ListAnAssetURLs_loop_count", "asts_ListStreamingLocators_loop_count", "spl_number_of_threads", "spl_rump_up_period", "spl_loop_count", "spl_ListStreamingPolicies_loop_count", "spl_ListStreamingLocators_loop_count", "spl_GetStreamingLocator_loop_count", "spl_CreateStreamingLocator_loop_count", "spl_locatorname_random_string_length", "spl_ListPaths_loop_count", "tj_number_of_threads", "tj_rump_up_period", "tj_loop_count", "tj_CreateUpdateTransform_loop_count", "tj_locatorname_random_string_length"]
 
 for(next_parameter in list_of_parameters){
-	default_parameter_name = next_parameter + "_default"
-	def var_to_check = vars.get(next_parameter)
-	if(var_to_check == null || var_to_check == 0 || var_to_check.length() == 0){
-		vars.put(next_parameter, vars.get(default_parameter_name))
-	}
+    default_parameter_name = next_parameter + "_default"
+    def var_to_check = vars.get(next_parameter)
+    if(var_to_check == null || var_to_check == 0 || var_to_check.length() == 0){
+        vars.put(next_parameter, vars.get(default_parameter_name))
+    }
 }
 ```
 
@@ -240,15 +240,15 @@ List<String> job_name_list = new ArrayList<>()
 List<String> job_id_list = new ArrayList<>()
 
 list_of_job_objects.eachWithIndex{next_job,index->
-	String next_job_name = next_job.get("name")
-	String next_job_id = next_job.get("properties").get("streamingLocatorId")
-	String next_job_path = next_job.get("id")
-	job_path_list.add(next_job_path)
-	job_name_list.add(next_job_name)
-	job_id_list.add(next_job_id)
-	
-	vars.put("job_path_" + (index + 1), next_job_path)
-	vars.put("job_name_" + (index + 1), next_job_name)
+    String next_job_name = next_job.get("name")
+    String next_job_id = next_job.get("properties").get("streamingLocatorId")
+    String next_job_path = next_job.get("id")
+    job_path_list.add(next_job_path)
+    job_name_list.add(next_job_name)
+    job_id_list.add(next_job_id)
+
+    vars.put("job_path_" + (index + 1), next_job_path)
+    vars.put("job_name_" + (index + 1), next_job_name)
 }
 
 vars.put("total_job_count", job_path_list.size as String)
@@ -265,7 +265,6 @@ vars.put("total_job_count", job_path_list.size as String)
 Также, в данной конфигурации использованы контроллеры цикла для отправки группы запросов. Это позволяет эмулировать поведение пользователя в соответствующих сценариях. Количеством итерация для циклов также можно управлять через соответствующие переменные в среде **Azure Load Testing**. 
 
 [Top](#table-of-contents)
-
 
 ## Streaming Policies and Locators Testing — spl Threading Group
 
@@ -284,7 +283,6 @@ vars.put("total_job_count", job_path_list.size as String)
 ![Alt text](./img/image-15.png)
 
 ```groovy
-
 String base_id = "asset_path_"
 String base_name = "asset_name_"
 
@@ -293,14 +291,14 @@ String max_paths_to_retrive_as_string = vars.get("asts_max_number_of_assets_retr
 int max_paths_to_retrive = 2
 
 if(max_paths_to_retrive_as_string != null){
-	max_paths_to_retrive = max_paths_to_retrive_as_string?.isInteger() ? max_paths_to_retrive_as_string as java.lang.Integer : max_paths_to_retrive
+    max_paths_to_retrive = max_paths_to_retrive_as_string?.isInteger() ? max_paths_to_retrive_as_string as java.lang.Integer : max_paths_to_retrive
 }
 
 for(int i = 1; i <= max_paths_to_retrive; i++){
-	String var_id = base_id + i
-	String var_name = base_name + i
-	vars.put(var_id, props.get(var_id))
-	vars.put(var_name, props.get(var_name))
+    String var_id = base_id + i
+    String var_name = base_name + i
+    vars.put(var_id, props.get(var_id))
+    vars.put(var_name, props.get(var_name))
 }
 
 log.info "Inside of translating script @Streaming Policies and Locators Testing"
@@ -324,20 +322,20 @@ log.info "Inside of translating script @Streaming Policies and Locators Testing"
 
 Краткая информация по метрикам предоставляемым окружением Azure Load Testing приведена в таблице. 
 
-| Метрика в ALT* | Метрика в [документе](https://ravnur.atlassian.net/wiki/spaces/RMP/pages/3671982104/VOD+streaming+load+test+planning+document) | Описание |
-|:--:|:--:|:------:|
-|Requests/sec (Avg)|Request Rate|Количество (усредненное) запросов в секунду отправленных на соответствующие эндпоинты|
-|Response time (successful responses)|||
-||||
-||||
-||||
-||||
-||||
-||||
-||||
-||||
-||||
-||||
+| Метрика в ALT*                       | Метрика в [документе](https://ravnur.atlassian.net/wiki/spaces/RMP/pages/3671982104/VOD+streaming+load+test+planning+document) | Описание                                                                              |
+|:------------------------------------:|:------------------------------------------------------------------------------------------------------------------------------:|:-------------------------------------------------------------------------------------:|
+| Requests/sec (Avg)                   | Request Rate                                                                                                                   | Количество (усредненное) запросов в секунду отправленных на соответствующие эндпоинты |
+| Response time (successful responses) |                                                                                                                                |                                                                                       |
+|                                      |                                                                                                                                |                                                                                       |
+|                                      |                                                                                                                                |                                                                                       |
+|                                      |                                                                                                                                |                                                                                       |
+|                                      |                                                                                                                                |                                                                                       |
+|                                      |                                                                                                                                |                                                                                       |
+|                                      |                                                                                                                                |                                                                                       |
+|                                      |                                                                                                                                |                                                                                       |
+|                                      |                                                                                                                                |                                                                                       |
+|                                      |                                                                                                                                |                                                                                       |
+|                                      |                                                                                                                                |                                                                                       |
 
 > ALT — Azure Load Testing
 
