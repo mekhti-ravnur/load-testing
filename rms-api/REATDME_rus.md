@@ -1,21 +1,30 @@
 # Apache JMeter configuration for load testing of RMS Public API infrastructure
 
-#### Эта конфигурация сделана для нагрузочного тестирования инфраструктуры RMS Public API. Конфигурация сделана с учетом как локального запуска, так и запуска через Azure Load Testing. 
+> Эта конфигурация сделана для нагрузочного тестирования инфраструктуры RMS Public API. Конфигурация сделана с учетом как локального запуска, так и запуска через Azure Load Testing. 
 
 > На данный момент не удалось добиться работы одного скрипта как в локальной среде, так и в среде **Azure Load Testing**. Проблема наблюдается с переменными, значения которых должны управлять параметрами запусков потоков (_Thread_). 
 
 -----------
 ### Table of contents
 - [Apache JMeter configuration for load testing of RMS Public API infrastructure](#apache-jmeter-configuration-for-load-testing-of-rms-public-api-infrastructure)
-      - [Эта конфигурация сделана для нагрузочного тестирования инфраструктуры RMS Public API. Конфигурация сделана с учетом как локального запуска, так и запуска через Azure Load Testing.](#эта-конфигурация-сделана-для-нагрузочного-тестирования-инфраструктуры-rms-public-api-конфигурация-сделана-с-учетом-как-локального-запуска-так-и-запуска-через-azure-load-testing)
-  - [Default environment configuration](#default-environment-configuration)
-  - [Azure LT environment configurations](#azure-lt-environment-configurations)
-  - [Check Azure LT environment for configurations](#check-azure-lt-environment-for-configurations)
-  - [Default Threads Running Properties](#default-threads-running-properties)
-  - [Azure LT environment Threads Testing Properties](#azure-lt-environment-threads-testing-properties)
-      - [Таблица переменных определяемых через окружение Azure Load Testing](#таблица-переменных-определяемых-через-окружение-azure-load-testing)
-  - [Check Azure LT environment for Thread Properties](#check-azure-lt-environment-for-thread-properties)
-  - [Get AAD Authorization Token — gAuthToken](#get-aad-authorization-token--gauthtoken)
+		- [Table of contents](#table-of-contents)
+	- [](#)
+	- [Default environment configuration](#default-environment-configuration)
+	- [Azure LT environment configurations](#azure-lt-environment-configurations)
+	- [Check Azure LT environment for configurations](#check-azure-lt-environment-for-configurations)
+	- [Default Threads Running Properties](#default-threads-running-properties)
+	- [Azure LT environment Threads Testing Properties](#azure-lt-environment-threads-testing-properties)
+			- [Таблица переменных определяемых через окружение **Azure Load Testing**](#таблица-переменных-определяемых-через-окружение-azure-load-testing)
+	- [Check Azure LT environment for Thread Properties](#check-azure-lt-environment-for-thread-properties)
+	- [Get AAD Authorization Token — gAuthToken](#get-aad-authorization-token--gauthtoken)
+	- [Assets testing — asts Threading Group](#assets-testing--asts-threading-group)
+		- [Prepare request path скрипты](#prepare-request-path-скрипты)
+		- [Парсеры возвращаемых запросами ответов](#парсеры-возвращаемых-запросами-ответов)
+		- [Итераторы запросов](#итераторы-запросов)
+	- [Streaming Policies and Locators Testing — spl Threading Group](#streaming-policies-and-locators-testing--spl-threading-group)
+		- [Скрипт трансляции глобальных переменных в локальную зону видимости](#скрипт-трансляции-глобальных-переменных-в-локальную-зону-видимости)
+	- [Transforms and Jobs Threading Group](#transforms-and-jobs-threading-group)
+	- [Информация по метрикам](#информация-по-метрикам)
 
 -----------
 
@@ -139,7 +148,7 @@ for(next_parameter in list_of_parameters){
 
 ![setUp Thread Group 1](./img/image-7.png)
 
-В модуле **Get AAD Authorization Token — gAuthToken** служит для получения токена авторизации через запрос к эндпоинту ___/auth/token___. Далее в скрипте ***Save AccessToken*** полученный токен сохраняется в глобальную переменную **AccessToken** для дальнейшего использования в запросах к **RMS Public API**.
+Модуль **Get AAD Authorization Token — gAuthToken** служит для получения токена авторизации через запрос к эндпоинту ___/auth/token___. Далее в скрипте ***Save AccessToken*** полученный токен сохраняется в глобальную переменную **AccessToken** для дальнейшего использования в запросах к **RMS Public API**.
 
 ```groovy
 vars.put("AccessToken", new String(data));
@@ -297,11 +306,13 @@ for(int i = 1; i <= max_paths_to_retrive; i++){
 log.info "Inside of translating script @Streaming Policies and Locators Testing"
 ```
 
+[Top](#table-of-contents)
+
 ## Transforms and Jobs Threading Group
 
 ![Thread Group 3](./img/image-16.png)
 
-В этой группе тестируются запросы манипуляции с трансформами и задачами. Так как во время запросов создаются множество новых элементов, все этапы объединены в единственную цикл обработки. 
+В этой группе тестируются запросы манипуляции с трансформами и задачами. Так как во время запросов создаются множество новых элементов, все этапы объединены в единственную цикл обработки для достижения цели очистки созданных записей после завершения тестов.  
 
 ![Loop Controller 1](./img/image-17.png)
 
